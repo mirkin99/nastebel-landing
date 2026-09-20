@@ -1,4 +1,4 @@
-/* NASTEBEL Landing */
+/* NASTEBEL Landing — carousel only (admin is inline in HTML) */
 
 const IDS = {
   "1.2": "1zr6KOzahcaQfdR-wbJiyPhCGkVajBDNE",
@@ -41,33 +41,23 @@ const IDS = {
 };
 
 function imgSrc(key, size) {
-  const id = IDS[key];
-  if (!id) return "";
-  return "https://lh3.googleusercontent.com/d/" + id + "=s" + (size || 800);
+  var id = IDS[key];
+  return id ? "https://lh3.googleusercontent.com/d/" + id + "=s" + (size || 800) : "";
 }
-
 function imgFallback(key, size) {
-  const id = IDS[key];
-  if (!id) return "";
-  return "https://drive.google.com/thumbnail?id=" + id + "&sz=w" + (size || 800);
+  var id = IDS[key];
+  return id ? "https://drive.google.com/thumbnail?id=" + id + "&sz=w" + (size || 800) : "";
 }
 
-const CAROUSEL_KEYS = [
-  "1.2", "1.3", "1.4", "1.5", "1.6", "1.7", "1.8", "1.9",
-  "1.10", "1.11", "1.12", "1.13", "1.14",
-  "3", "5", "9", "11", "14",
-  "a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9",
-  "a10", "a11", "a12", "a13", "a14", "a15", "a16", "a17", "a18", "a19"
-];
+var KEYS = ["1.2","1.3","1.4","1.5","1.6","1.7","1.8","1.9","1.10","1.11","1.12","1.13","1.14","3","5","9","11","14","a1","a2","a3","a4","a5","a6","a7","a8","a9","a10","a11","a12","a13","a14","a15","a16","a17","a18","a19"];
 
-function buildCarousel() {
-  const track = document.getElementById("carouselTrack");
+document.addEventListener("DOMContentLoaded", function () {
+  var track = document.getElementById("carouselTrack");
   if (!track) return;
-
-  CAROUSEL_KEYS.forEach(function (key) {
-    const item = document.createElement("div");
+  KEYS.forEach(function (key) {
+    var item = document.createElement("div");
     item.className = "carousel-item";
-    const img = document.createElement("img");
+    var img = document.createElement("img");
     img.alt = "";
     img.loading = "lazy";
     img.referrerPolicy = "no-referrer";
@@ -80,112 +70,21 @@ function buildCarousel() {
     item.appendChild(img);
     track.appendChild(item);
   });
-
-  let isDown = false;
-  let startX = 0;
-  let scrollLeft = 0;
-
+  var isDown = false, startX = 0, scrollLeft = 0;
   track.addEventListener("mousedown", function (e) {
-    isDown = true;
-    track.classList.add("dragging");
-    startX = e.pageX - track.offsetLeft;
-    scrollLeft = track.scrollLeft;
+    isDown = true; track.classList.add("dragging");
+    startX = e.pageX - track.offsetLeft; scrollLeft = track.scrollLeft;
   });
-  track.addEventListener("mouseleave", function () {
-    isDown = false;
-    track.classList.remove("dragging");
-  });
-  track.addEventListener("mouseup", function () {
-    isDown = false;
-    track.classList.remove("dragging");
-  });
+  track.addEventListener("mouseleave", function () { isDown = false; track.classList.remove("dragging"); });
+  track.addEventListener("mouseup", function () { isDown = false; track.classList.remove("dragging"); });
   track.addEventListener("mousemove", function (e) {
     if (!isDown) return;
     e.preventDefault();
-    const x = e.pageX - track.offsetLeft;
-    const walk = (x - startX) * 1.4;
-    track.scrollLeft = scrollLeft - walk;
+    track.scrollLeft = scrollLeft - (e.pageX - track.offsetLeft - startX) * 1.4;
   });
-}
-
-/* Admin: password 0302 → open previous project */
-const ADMIN_PASSWORD = "0302";
-const PREVIOUS_PROJECT_URL = "https://raw.githack.com/mirkin99/nastebel/main/index.html";
-
-function setupAdmin() {
-  const btn = document.getElementById("adminBtn");
-  const modal = document.getElementById("adminModal");
-  const input = document.getElementById("adminPassword");
-  const error = document.getElementById("adminError");
-  const submit = document.getElementById("adminSubmit");
-  const cancel = document.getElementById("adminCancel");
-
-  if (!btn || !modal) return;
-
-  function openModal() {
-    modal.classList.add("open");
-    modal.setAttribute("aria-hidden", "false");
-    error.textContent = "";
-    input.value = "";
-    setTimeout(function () { input.focus(); }, 50);
-  }
-
-  function closeModal() {
-    modal.classList.remove("open");
-    modal.setAttribute("aria-hidden", "true");
-    error.textContent = "";
-    input.value = "";
-  }
-
-  function tryLogin() {
-    const value = (input.value || "").trim();
-    if (value === ADMIN_PASSWORD) {
-      closeModal();
-      window.location.href = PREVIOUS_PROJECT_URL;
-    } else {
-      error.textContent = "Неверный пароль";
-      input.value = "";
-      input.focus();
-    }
-  }
-
-  btn.addEventListener("click", openModal);
-  cancel.addEventListener("click", closeModal);
-  submit.addEventListener("click", tryLogin);
-
-  input.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      tryLogin();
-    }
+  var offer = document.getElementById("offerBtn");
+  if (offer) offer.addEventListener("click", function (e) {
+    e.preventDefault();
+    alert("Ссылка на оферту будет добавлена в ближайшее время.");
   });
-
-  modal.addEventListener("click", function (e) {
-    if (e.target === modal) closeModal();
-  });
-
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
-  });
-}
-
-const OFFER_URL = "";
-
-function setupOffer() {
-  const btn = document.getElementById("offerBtn");
-  if (!btn) return;
-  if (OFFER_URL) {
-    btn.href = OFFER_URL;
-  } else {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      alert("Ссылка на оферту будет добавлена в ближайшее время.");
-    });
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  buildCarousel();
-  setupAdmin();
-  setupOffer();
 });
