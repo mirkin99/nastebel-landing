@@ -1,8 +1,6 @@
-/* NASTEBEL Landing — images from Google Drive (same IDs as previous project) */
+/* NASTEBEL Landing */
 
 const IDS = {
-  "bg": "1E7lS_ryt7dr0pDGXxcyAnsnf2VF3cB6m",
-  "logo": "1MG6APfUyH004zygBVvI-TA2w0fywPS6K",
   "1.2": "1zr6KOzahcaQfdR-wbJiyPhCGkVajBDNE",
   "1.3": "1yDEXntcJsSB_EnX4WwYsp28G7J2jNAWS",
   "1.4": "133owg7_vh2jlFNLmX7S4Sagek9Nq1BGk",
@@ -52,17 +50,6 @@ function imgFallback(key, size) {
   const id = IDS[key];
   if (!id) return "";
   return "https://drive.google.com/thumbnail?id=" + id + "&sz=w" + (size || 800);
-}
-
-function bindImg(el, key, size) {
-  if (!el) return;
-  el.referrerPolicy = "no-referrer";
-  el.src = imgSrc(key, size);
-  el.onerror = function () {
-    if (el.dataset.fb) return;
-    el.dataset.fb = "1";
-    el.src = imgFallback(key, size);
-  };
 }
 
 const CAROUSEL_KEYS = [
@@ -121,23 +108,67 @@ function buildCarousel() {
   });
 }
 
-/* Admin redirect — placeholder, will be updated when target is provided */
-const ADMIN_REDIRECT_URL = "";
+/* Admin: password 0302 → open previous project */
+const ADMIN_PASSWORD = "0302";
+const PREVIOUS_PROJECT_URL = "https://raw.githack.com/mirkin99/nastebel/main/index.html";
 
 function setupAdmin() {
   const btn = document.getElementById("adminBtn");
-  if (!btn) return;
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    if (ADMIN_REDIRECT_URL) {
-      window.location.href = ADMIN_REDIRECT_URL;
+  const modal = document.getElementById("adminModal");
+  const input = document.getElementById("adminPassword");
+  const error = document.getElementById("adminError");
+  const submit = document.getElementById("adminSubmit");
+  const cancel = document.getElementById("adminCancel");
+
+  if (!btn || !modal) return;
+
+  function openModal() {
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    error.textContent = "";
+    input.value = "";
+    setTimeout(function () { input.focus(); }, 50);
+  }
+
+  function closeModal() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    error.textContent = "";
+    input.value = "";
+  }
+
+  function tryLogin() {
+    const value = (input.value || "").trim();
+    if (value === ADMIN_PASSWORD) {
+      closeModal();
+      window.location.href = PREVIOUS_PROJECT_URL;
     } else {
-      console.info("[admin] redirect URL not set yet");
+      error.textContent = "Неверный пароль";
+      input.value = "";
+      input.focus();
     }
+  }
+
+  btn.addEventListener("click", openModal);
+  cancel.addEventListener("click", closeModal);
+  submit.addEventListener("click", tryLogin);
+
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      tryLogin();
+    }
+  });
+
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
   });
 }
 
-/* Offer link — placeholder until PDF is provided */
 const OFFER_URL = "";
 
 function setupOffer() {
@@ -154,7 +185,6 @@ function setupOffer() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  bindImg(document.getElementById("heroLily"), "1.7", 1600);
   buildCarousel();
   setupAdmin();
   setupOffer();
