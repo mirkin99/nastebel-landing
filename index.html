@@ -3,22 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#f5efe6" />
+  <meta name="theme-color" content="#F8F7F2" />
   <meta name="description" content="NASTEBEL — цветочная мастерская в Москве. Гибкие форматы: подписка и разовые поставки для оформления пространств." />
   <title>NASTEBEL — цветы для вашего пространства</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://lh3.googleusercontent.com" />
   <link rel="preconnect" href="https://drive.google.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- ===== HERO BANNER ===== -->
   <header class="hero">
     <div class="hero-bg">
       <div class="hero-gradient"></div>
-      <img class="hero-lily" id="heroLily" alt="" referrerpolicy="no-referrer" />
+      <div class="hero-lilies" aria-hidden="true">
+        <svg viewBox="0 0 420 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="petalA" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFFEF9"/>
+              <stop offset="55%" stop-color="#F5F0E6"/>
+              <stop offset="100%" stop-color="#E8E0D2"/>
+            </linearGradient>
+            <linearGradient id="petalB" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FFFEFB"/>
+              <stop offset="100%" stop-color="#EDE6D8"/>
+            </linearGradient>
+            <linearGradient id="centerG" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#C9A86C"/>
+              <stop offset="100%" stop-color="#A88B4A"/>
+            </linearGradient>
+          </defs>
+          <path d="M210 460 C205 380 198 300 190 240" stroke="#6B7358" stroke-width="2.2" stroke-linecap="round" opacity="0.55"/>
+          <path d="M245 460 C250 390 258 320 268 250" stroke="#6B7358" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+          <path d="M175 460 C168 400 155 340 148 280" stroke="#6B7358" stroke-width="1.8" stroke-linecap="round" opacity="0.4"/>
+          <ellipse cx="155" cy="340" rx="28" ry="12" transform="rotate(-35 155 340)" fill="#7B8270" opacity="0.35"/>
+          <ellipse cx="270" cy="360" rx="22" ry="10" transform="rotate(28 270 360)" fill="#7B8270" opacity="0.3"/>
+          <g transform="translate(200,120)">
+            <path d="M40 90 Q10 50 5 20 Q25 35 40 55 Q55 35 75 20 Q70 50 40 90Z" fill="url(#petalA)" opacity="0.95"/>
+            <path d="M40 90 Q0 70 -5 40 Q20 55 40 70 Q60 55 85 40 Q80 70 40 90Z" fill="url(#petalB)" opacity="0.9"/>
+            <path d="M40 90 Q20 100 5 95 Q25 85 40 75 Q55 85 75 95 Q60 100 40 90Z" fill="url(#petalA)" opacity="0.88"/>
+            <path d="M40 90 Q55 45 80 15 Q65 40 50 60 Q45 50 40 90Z" fill="#F8F4EC" opacity="0.92"/>
+            <path d="M40 90 Q25 45 0 15 Q15 40 30 60 Q35 50 40 90Z" fill="#F0EBE0" opacity="0.9"/>
+            <path d="M40 90 Q40 50 40 10 Q48 40 42 65 Q40 75 40 90Z" fill="#FFFDF8" opacity="0.95"/>
+            <circle cx="40" cy="72" r="6" fill="url(#centerG)" opacity="0.85"/>
+            <path d="M37 72 L28 48 M40 70 L40 42 M43 72 L52 48" stroke="#B89550" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+          </g>
+          <g transform="translate(95,175) scale(0.72)">
+            <path d="M40 90 Q10 50 5 20 Q25 35 40 55 Q55 35 75 20 Q70 50 40 90Z" fill="url(#petalB)" opacity="0.88"/>
+            <path d="M40 90 Q0 70 -5 40 Q20 55 40 70 Q60 55 85 40 Q80 70 40 90Z" fill="url(#petalA)" opacity="0.85"/>
+            <path d="M40 90 Q20 100 5 95 Q25 85 40 75 Q55 85 75 95 Q60 100 40 90Z" fill="#EDE6D8" opacity="0.8"/>
+            <path d="M40 90 Q40 50 40 12 Q48 40 42 65 Q40 75 40 90Z" fill="#FFFEF9" opacity="0.9"/>
+            <circle cx="40" cy="72" r="5" fill="url(#centerG)" opacity="0.75"/>
+            <path d="M37 72 L30 52 M40 70 L40 48 M43 72 L50 52" stroke="#B89550" stroke-width="1.1" stroke-linecap="round" opacity="0.65"/>
+          </g>
+          <g transform="translate(280,95) scale(0.55) rotate(12)">
+            <path d="M40 90 Q15 55 12 25 Q30 40 40 58 Q50 40 68 25 Q65 55 40 90Z" fill="url(#petalA)" opacity="0.9"/>
+            <path d="M40 90 Q25 50 20 20 Q35 38 40 55 Q45 38 60 20 Q55 50 40 90Z" fill="#FFFDF8" opacity="0.92"/>
+            <circle cx="40" cy="70" r="4.5" fill="url(#centerG)" opacity="0.7"/>
+          </g>
+          <circle cx="320" cy="200" r="3" fill="#C9A86C" opacity="0.25"/>
+          <circle cx="90" cy="150" r="2.5" fill="#C9A86C" opacity="0.2"/>
+          <circle cx="340" cy="320" r="2" fill="#7B8270" opacity="0.2"/>
+        </svg>
+      </div>
     </div>
 
     <div class="hero-top">
@@ -28,33 +76,27 @@
       </div>
       <div class="hero-actions">
         <a class="btn-contact" href="https://t.me/nastebel" target="_blank" rel="noopener noreferrer">Связаться</a>
-        <a class="btn-admin" id="adminBtn" href="#admin" title="Вход администратора">Admin</a>
+        <button type="button" class="btn-admin" id="adminBtn" title="Вход администратора">Admin</button>
       </div>
     </div>
 
     <div class="hero-content">
-      <div class="hero-text">
-        <h1 class="hero-title">Выберите формат,<br>который вам подходит</h1>
-        <p class="hero-subtitle">Гибкие условия сотрудничества. Мы подстроимся под ваше пространство, ритм и задачи.</p>
-      </div>
-      <div class="hero-handwrite">
-        <p class="handwrite-text">Цветы создают атмосферу</p>
-        <span class="handwrite-heart" aria-hidden="true">♥</span>
-      </div>
+      <h1 class="hero-title">Выберите формат,<br>который вам подходит</h1>
+      <p class="hero-subtitle">Гибкие условия сотрудничества. Мы подстроимся под ваше пространство, ритм и задачи.</p>
+    </div>
+
+    <div class="hero-handwrite" aria-hidden="true">
+      <p class="handwrite-text">Цветы создают<br>атмосферу</p>
+      <span class="handwrite-heart">♥</span>
     </div>
   </header>
 
-  <!-- ===== CAROUSEL ===== -->
   <section class="carousel-section" aria-label="Референсы работ">
-    <div class="carousel-track" id="carouselTrack">
-      <!-- filled by JS -->
-    </div>
+    <div class="carousel-track" id="carouselTrack"></div>
   </section>
 
-  <!-- ===== FORMATS ===== -->
   <section class="formats" id="formats">
     <div class="formats-inner">
-      <!-- LEFT: Subscription -->
       <article class="format-card format-sub">
         <div class="format-header">
           <h2 class="format-title">Подписка</h2>
@@ -67,7 +109,7 @@
               <span class="tariff-num">1</span>
               <span class="tariff-period">месяц</span>
             </div>
-            <p class="tariff-note">Формат, чтобы попробовать, оценить качество и понять, подходит ли он вашему пространству.</p>
+            <p class="tariff-note">Чтобы попробовать, оценить качество и понять, подходит ли формат вашему пространству.</p>
           </div>
           <div class="tariff">
             <div class="tariff-circle">
@@ -75,7 +117,7 @@
               <span class="tariff-period">месяца</span>
             </div>
             <span class="tariff-discount">−5%</span>
-            <p class="tariff-note">Для тех, кто хочет стабильное оформление и планирует сотрудничество на несколько месяцев.</p>
+            <p class="tariff-note">Стабильное оформление и сотрудничество на несколько месяцев.</p>
           </div>
           <div class="tariff">
             <div class="tariff-circle">
@@ -96,7 +138,7 @@
               </span>
               <div>
                 <strong>Согласовываем поставку</strong>
-                <p>Обсуждаем ваши пожелания, сезонность и особенности пространства.</p>
+                <p>Обсуждаем пожелания, сезонность и особенности пространства.</p>
               </div>
             </li>
             <li class="step">
@@ -105,7 +147,7 @@
               </span>
               <div>
                 <strong>Разрабатываем дизайн</strong>
-                <p>Подбираем композиции под ваш стиль, задачу и бюджет, согласовываем концепцию.</p>
+                <p>Подбираем композиции под стиль, задачу и бюджет, согласовываем концепцию.</p>
               </div>
             </li>
             <li class="step">
@@ -114,7 +156,7 @@
               </span>
               <div>
                 <strong>Выбираем частоту поставок</strong>
-                <p>По умолчанию в среднем 3 раза в месяц. Для сухоцветов, стойких или быстро увядающих цветов график меняется индивидуально.</p>
+                <p>В среднем 3 раза в месяц. Для сухоцветов и стойких цветов график индивидуальный.</p>
               </div>
             </li>
             <li class="step">
@@ -130,7 +172,6 @@
         </div>
       </article>
 
-      <!-- RIGHT: One-time -->
       <article class="format-card format-once">
         <div class="format-header">
           <h2 class="format-title">Разовые поставки</h2>
@@ -138,22 +179,19 @@
         </div>
         <div class="once-body">
           <p>Создаём индивидуальные композиции, букеты, оформление мероприятий и другие цветочные решения под ваш запрос.</p>
-          <p>Идеально подходит для сухоцветов, стойких композиций, стабилизированных цветов — для тех, кто хочет красоту без лишних забот.</p>
+          <p>Идеально для сухоцветов, стойких композиций и стабилизированных цветов — красота без лишних забот.</p>
           <ul class="once-list">
             <li>Индивидуальные букеты и композиции</li>
             <li>Оформление мероприятий и пространств</li>
             <li>Сухоцветы и стабилизированные растения</li>
             <li>Разовые и сезонные заказы</li>
           </ul>
-          <a class="btn-offer" id="offerBtn" href="#" target="_blank" rel="noopener noreferrer">
-            Ознакомиться с офертой
-          </a>
+          <a class="btn-offer" id="offerBtn" href="#" target="_blank" rel="noopener noreferrer">Ознакомиться с офертой</a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-inner">
       <span class="footer-brand">NASTEBEL</span>
@@ -161,6 +199,19 @@
       <a class="footer-tg" href="https://t.me/nastebel" target="_blank" rel="noopener noreferrer">Telegram-канал</a>
     </div>
   </footer>
+
+  <div class="modal-overlay" id="adminModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="modalTitle">
+      <h2 class="modal-title" id="modalTitle">Вход администратора</h2>
+      <p class="modal-hint">Введите пароль</p>
+      <input class="modal-input" id="adminPassword" type="password" inputmode="numeric" maxlength="8" autocomplete="off" placeholder="••••" />
+      <p class="modal-error" id="adminError"></p>
+      <div class="modal-actions">
+        <button type="button" class="modal-btn modal-btn-ghost" id="adminCancel">Отмена</button>
+        <button type="button" class="modal-btn modal-btn-primary" id="adminSubmit">Войти</button>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
