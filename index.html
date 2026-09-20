@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f5efe6" />
+  <meta name="description" content="NASTEBEL — цветочная мастерская в Москве. Гибкие форматы: подписка и разовые поставки для оформления пространств." />
+  <title>NASTEBEL — цветы для вашего пространства</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://lh3.googleusercontent.com" />
+  <link rel="preconnect" href="https://drive.google.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== HERO BANNER ===== -->
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <img class="hero-lily" id="heroLily" alt="" referrerpolicy="no-referrer" />
+    </div>
+
+    <div class="hero-top">
+      <div class="hero-brand">
+        <span class="brand-name">NASTEBEL</span>
+        <span class="brand-tagline">Цветы для вашего пространства</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn-contact" href="https://t.me/nastebel" target="_blank" rel="noopener noreferrer">Связаться</a>
+        <a class="btn-admin" id="adminBtn" href="#admin" title="Вход администратора">Admin</a>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Выберите формат,<br>который вам подходит</h1>
+        <p class="hero-subtitle">Гибкие условия сотрудничества. Мы подстроимся под ваше пространство, ритм и задачи.</p>
+      </div>
+      <div class="hero-handwrite">
+        <p class="handwrite-text">Цветы создают атмосферу</p>
+        <span class="handwrite-heart" aria-hidden="true">♥</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== CAROUSEL ===== -->
+  <section class="carousel-section" aria-label="Референсы работ">
+    <div class="carousel-track" id="carouselTrack">
+      <!-- filled by JS -->
+    </div>
+  </section>
+
+  <!-- ===== FORMATS ===== -->
+  <section class="formats" id="formats">
+    <div class="formats-inner">
+      <!-- LEFT: Subscription -->
+      <article class="format-card format-sub">
+        <div class="format-header">
+          <h2 class="format-title">Подписка</h2>
+          <p class="format-desc">Постоянное цветочное оформление вашего пространства</p>
+        </div>
+
+        <div class="tariffs">
+          <div class="tariff">
+            <div class="tariff-circle">
+              <span class="tariff-num">1</span>
+              <span class="tariff-period">месяц</span>
+            </div>
+            <p class="tariff-note">Формат, чтобы попробовать, оценить качество и понять, подходит ли он вашему пространству.</p>
+          </div>
+          <div class="tariff">
+            <div class="tariff-circle">
+              <span class="tariff-num">2</span>
+              <span class="tariff-period">месяца</span>
+            </div>
+            <span class="tariff-discount">−5%</span>
+            <p class="tariff-note">Для тех, кто хочет стабильное оформление и планирует сотрудничество на несколько месяцев.</p>
+          </div>
+          <div class="tariff">
+            <div class="tariff-circle">
+              <span class="tariff-num">3</span>
+              <span class="tariff-period">месяца</span>
+            </div>
+            <span class="tariff-discount">−10%</span>
+            <p class="tariff-note">Долгосрочное сотрудничество — больше периода, больше экономии.</p>
+          </div>
+        </div>
+
+        <div class="how-it-works">
+          <h3 class="how-title">Как это работает</h3>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 7V3m8 4V3M3 11h18M5 7h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z"/></svg>
+              </span>
+              <div>
+                <strong>Согласовываем поставку</strong>
+                <p>Обсуждаем ваши пожелания, сезонность и особенности пространства.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </span>
+              <div>
+                <strong>Разрабатываем дизайн</strong>
+                <p>Подбираем композиции под ваш стиль, задачу и бюджет, согласовываем концепцию.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <div>
+                <strong>Выбираем частоту поставок</strong>
+                <p>По умолчанию в среднем 3 раза в месяц. Для сухоцветов, стойких или быстро увядающих цветов график меняется индивидуально.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 15h6M9 11h6"/></svg>
+              </span>
+              <div>
+                <strong>Оформляем договор</strong>
+                <p>Для подписки заключаем индивидуальный договор с согласованными условиями.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </article>
+
+      <!-- RIGHT: One-time -->
+      <article class="format-card format-once">
+        <div class="format-header">
+          <h2 class="format-title">Разовые поставки</h2>
+          <p class="format-desc">Флористические работы по вашему заказу</p>
+        </div>
+        <div class="once-body">
+          <p>Создаём индивидуальные композиции, букеты, оформление мероприятий и другие цветочные решения под ваш запрос.</p>
+          <p>Идеально подходит для сухоцветов, стойких композиций, стабилизированных цветов — для тех, кто хочет красоту без лишних забот.</p>
+          <ul class="once-list">
+            <li>Индивидуальные букеты и композиции</li>
+            <li>Оформление мероприятий и пространств</li>
+            <li>Сухоцветы и стабилизированные растения</li>
+            <li>Разовые и сезонные заказы</li>
+          </ul>
+          <a class="btn-offer" id="offerBtn" href="#" target="_blank" rel="noopener noreferrer">
+            Ознакомиться с офертой
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-brand">NASTEBEL</span>
+      <p class="footer-note">Цветочная мастерская · Москва</p>
+      <a class="footer-tg" href="https://t.me/nastebel" target="_blank" rel="noopener noreferrer">Telegram-канал</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
