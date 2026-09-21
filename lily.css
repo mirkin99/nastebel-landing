@@ -1,0 +1,11 @@
+/* Lily hero photo from Drive */
+.hero-photo-wrap {
+  background-image: url("https://lh3.googleusercontent.com/d/1FsGMgh8NCZJxKf3-2xCRLC7Z06d4LO92=s1400");
+  background-size: cover;
+  background-position: 55% 35%;
+  background-repeat: no-repeat;
+}
+.hero-photo {
+  width: 100%;
+  height: 100%;
+}
