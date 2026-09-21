@@ -1,1 +1,195 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F8F7F2" />
+  <meta name="description" content="NASTEBEL — цветочная мастерская в Москве." />
+  <title>NASTEBEL — цветы для вашего пространства</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://lh3.googleusercontent.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://db.onlinewebfonts.com/c/be6f31338eebea6cc5467e978fe98ea1?family=Miama+Nueva" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="lily.css?v=5" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="hero-top">
+      <div class="hero-brand">
+        <span class="brand-name">NASTEBEL</span>
+        <span class="brand-tagline">Цветы для вашего пространства</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn-contact" href="https://t.me/nastebel" target="_blank" rel="noopener noreferrer">Связаться</a>
+        <button type="button" class="btn-admin" id="adminBtn" aria-label="Admin">Admin</button>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Выберите формат,<br>который вам подходит</h1>
+      <p class="hero-subtitle">Гибкие условия сотрудничества. Мы подстроимся под ваше пространство, ритм и задачи.</p>
+    </div>
+
+    <div class="hero-handwrite" aria-hidden="true">
+      <p class="handwrite-text">Цветы создают<br>атмосферу</p>
+    </div>
+  </header>
+
+  <section class="carousel-section" aria-label="Референсы работ">
+    <div class="carousel-track" id="carouselTrack"></div>
+  </section>
+
+  <section class="formats" id="formats">
+    <div class="formats-inner">
+      <article class="format-card format-sub">
+        <div class="format-header">
+          <h2 class="format-title">Подписка</h2>
+          <p class="format-desc">Постоянное цветочное оформление вашего пространства</p>
+        </div>
+        <div class="tariffs">
+          <div class="tariff">
+            <div class="tariff-circle c1">
+              <span class="tariff-num">1</span>
+              <span class="tariff-period">месяц</span>
+            </div>
+            <p class="tariff-note">Чтобы попробовать, оценить качество и понять, подходит ли формат вашему пространству.</p>
+          </div>
+          <div class="tariff">
+            <div class="tariff-circle c2">
+              <span class="tariff-num">2</span>
+              <span class="tariff-period">месяца</span>
+            </div>
+            <span class="tariff-discount">−5%</span>
+            <p class="tariff-note">Стабильное оформление и сотрудничество на несколько месяцев.</p>
+          </div>
+          <div class="tariff">
+            <div class="tariff-circle c3">
+              <span class="tariff-num">3</span>
+              <span class="tariff-period">месяца</span>
+            </div>
+            <span class="tariff-discount">−10%</span>
+            <p class="tariff-note">Долгосрочное сотрудничество — больше периода, больше экономии.</p>
+          </div>
+        </div>
+        <div class="how-it-works">
+          <h3 class="how-title">Как это работает</h3>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 7V3m8 4V3M3 11h18M5 7h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z"/></svg></span>
+              <div><strong>Согласовываем поставку</strong><p>Обсуждаем пожелания, сезонность и особенности пространства.</p></div>
+            </li>
+            <li class="step">
+              <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
+              <div><strong>Разрабатываем дизайн</strong><p>Подбираем композиции под стиль, задачу и бюджет, согласовываем концепцию.</p></div>
+            </li>
+            <li class="step">
+              <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <div><strong>Выбираем частоту поставок</strong><p>В среднем 3 раза в месяц. Для сухоцветов и стойких цветов график индивидуальный.</p></div>
+            </li>
+            <li class="step">
+              <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 15h6M9 11h6"/></svg></span>
+              <div><strong>Оформляем договор</strong><p>Для подписки заключаем индивидуальный договор с согласованными условиями.</p></div>
+            </li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="format-card format-once">
+        <div class="format-header">
+          <h2 class="format-title">Разовые поставки</h2>
+          <p class="format-desc">Флористические работы по вашему заказу</p>
+        </div>
+        <div class="once-body">
+          <p>Создаём индивидуальные композиции, букеты, оформление мероприятий и другие цветочные решения под ваш запрос.</p>
+          <p>Идеально для сухоцветов, стойких композиций и стабилизированных цветов — красота без лишних забот.</p>
+          <ul class="once-list">
+            <li>Индивидуальные букеты и композиции</li>
+            <li>Оформление мероприятий и пространств</li>
+            <li>Сухоцветы и стабилизированные растения</li>
+            <li>Разовые и сезонные заказы</li>
+          </ul>
+          <a class="btn-offer" id="offerBtn" href="#" target="_blank" rel="noopener noreferrer">Ознакомиться с офертой</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">NASTEBEL</span>
+        <p class="footer-note">Цветочная мастерская · Москва</p>
+        <p class="footer-legal">ИП Тетерина Алёна Павловна · ИНН 165055895544</p>
+      </div>
+      <a class="footer-tg" href="https://t.me/nastebel" target="_blank" rel="noopener noreferrer">Telegram-канал</a>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="adminModal" aria-hidden="true" hidden>
+    <div class="modal" role="dialog" aria-labelledby="modalTitle">
+      <h2 class="modal-title" id="modalTitle">Вход</h2>
+      <p class="modal-hint">Введите пароль</p>
+      <input class="modal-input" id="adminPassword" type="password" inputmode="numeric" maxlength="8" autocomplete="off" placeholder="••••" />
+      <p class="modal-error" id="adminError"></p>
+      <div class="modal-actions">
+        <button type="button" class="modal-btn modal-btn-ghost" id="adminCancel">Отмена</button>
+        <button type="button" class="modal-btn modal-btn-primary" id="adminSubmit">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=5"></script>
+  <script>
+    (function () {
+      var ADMIN_PASSWORD = "0302";
+      var PREV = "https://raw.githack.com/mirkin99/nastebel/main/index.html";
+      var btn = document.getElementById("adminBtn");
+      var modal = document.getElementById("adminModal");
+      if (!btn || !modal) return;
+      var input = document.getElementById("adminPassword");
+      var error = document.getElementById("adminError");
+      var submit = document.getElementById("adminSubmit");
+      var cancel = document.getElementById("adminCancel");
+      function openM() {
+        modal.hidden = false;
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        if (error) error.textContent = "";
+        if (input) { input.value = ""; setTimeout(function () { input.focus(); }, 40); }
+      }
+      function closeM() {
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+        modal.hidden = true;
+        if (error) error.textContent = "";
+        if (input) input.value = "";
+      }
+      function tryLogin() {
+        var v = (input && input.value || "").trim();
+        if (v === ADMIN_PASSWORD) {
+          closeM();
+          window.location.href = PREV;
+        } else {
+          if (error) error.textContent = "Неверный пароль";
+          if (input) { input.value = ""; input.focus(); }
+        }
+      }
+      btn.addEventListener("click", function (e) { e.preventDefault(); openM(); });
+      if (cancel) cancel.addEventListener("click", closeM);
+      if (submit) submit.addEventListener("click", tryLogin);
+      if (input) input.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); tryLogin(); } });
+      modal.addEventListener("click", function (e) { if (e.target === modal) closeM(); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal.classList.contains("open")) closeM(); });
+    })();
+  </script>
+</body>
+</html>
