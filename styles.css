@@ -62,8 +62,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   right: 0;
   width: min(56%, 620px);
   height: 100%;
-  object-fit: cover;
-  object-position: 55% 35%;
+  background-size: cover;
+  background-position: 55% 35%;
+  background-repeat: no-repeat;
   z-index: 0;
 }
 .hero-gradient {
@@ -364,7 +365,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .hero-lily-photo {
     width: 100%;
     opacity: 0.55;
-    object-position: 60% 30%;
+    background-position: 60% 30%;
   }
   .hero-gradient {
     background: linear-gradient(
