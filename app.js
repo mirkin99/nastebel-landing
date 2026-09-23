@@ -82,9 +82,4 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     track.scrollLeft = scrollLeft - (e.pageX - track.offsetLeft - startX) * 1.4;
   });
-  var offer = document.getElementById("offerBtn");
-  if (offer) offer.addEventListener("click", function (e) {
-    e.preventDefault();
-    alert("Ссылка на оферту будет добавлена в ближайшее время.");
-  });
 });
