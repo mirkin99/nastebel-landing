@@ -126,21 +126,27 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   line-height: 1.55; color: var(--ink-soft); max-width: 400px;
 }
 
+/* Desktop: handwrite text in top-right of hero */
 .hero-handwrite {
-  position: absolute; z-index: 3;
-  left: 28px;
-  bottom: 14%;
-  transform: rotate(-7deg);
-  text-align: left; pointer-events: none; max-width: 280px;
+  position: absolute;
+  z-index: 3;
+  right: 36px;
+  top: 88px;
+  left: auto;
+  bottom: auto;
+  transform: rotate(-6deg);
+  text-align: right;
+  pointer-events: none;
+  max-width: 260px;
 }
 .handwrite-text {
   font-family: var(--script);
-  font-size: clamp(2.1rem, 3.5vw, 3rem);
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
   font-weight: 400;
   color: var(--ink);
   line-height: 1.12;
   letter-spacing: 0.02em;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 .carousel-section { padding: 16px 0 28px; background: var(--bg); overflow: hidden; }
@@ -357,7 +363,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 900px) {
   .formats-inner { grid-template-columns: 1fr; }
   .hero-photo-wrap { width: 52%; }
-  .hero-handwrite { left: 20px; bottom: 12%; }
+  .hero-handwrite {
+    right: 24px;
+    top: 78px;
+  }
 }
 @media (max-width: 640px) {
   .hero { min-height: auto; }
@@ -373,9 +382,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     position: relative;
     left: auto;
     right: auto;
+    top: auto;
     bottom: auto;
     margin: 12px 16px 32px;
     transform: rotate(-5deg);
+    text-align: left;
     max-width: min(280px, 85vw);
     z-index: 5;
   }
