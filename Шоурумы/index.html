@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171715">
+  <meta name="description" content="Сезонное цветочное оформление бутиков и шоурумов от NASTEBEL: для новых коллекций, клиентских пространств и фотозон.">
+  <title>Цветочное оформление шоурумов — NASTEBEL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#171715;--paper:#f4f2ed;--white:#fff;--muted:#77756f;--line:rgba(23,23,21,.16);--wine:#632d38;--sage:#818878;--display:"Cormorant Garamond",Georgia,serif;--ui:"Manrope",Arial,sans-serif;--small:12px;--body:16px;--display-size:clamp(44px,7.3vw,104px);--wrap:1440px}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ui);font-size:var(--body);line-height:1.55;-webkit-font-smoothing:antialiased}
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;color:inherit}
+    .wrap{width:min(calc(100% - 64px),var(--wrap));margin-inline:auto}
+    .micro{font-size:var(--small);line-height:1.45;letter-spacing:.13em;text-transform:uppercase}
+    .topline{height:34px;background:var(--ink);color:#f8f7f4;display:flex;align-items:center;justify-content:center;text-align:center}
+    .site-header{background:var(--paper);border-bottom:1px solid var(--line);position:relative;z-index:5}
+    .header-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{font-size:var(--body);font-weight:700;letter-spacing:.16em;white-space:nowrap}
+    .main-nav{display:flex;align-items:center;gap:clamp(18px,3vw,48px)}
+    .main-nav a,.header-contact{font-size:var(--small);letter-spacing:.08em;text-transform:uppercase}
+    .main-nav a{color:#56544f;transition:color .2s}
+    .main-nav a:hover,.header-contact:hover{color:var(--wine)}
+    .header-contact{border:1px solid var(--ink);border-radius:99px;padding:12px 18px;white-space:nowrap}
+    .hero{position:relative;min-height:min(760px,calc(100svh - 110px));min-height:clamp(620px,calc(100svh - 110px),850px);background:#262522;color:#fff;overflow:hidden}
+    .hero-image{position:absolute;inset:0}
+    .hero-image img{object-position:center 55%}
+    .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,18,17,.80) 0%,rgba(18,18,17,.57) 38%,rgba(18,18,17,.08) 78%),linear-gradient(0deg,rgba(18,18,17,.40),transparent 35%)}
+    .hero-inner{position:relative;min-height:inherit;display:flex;align-items:center;padding-block:84px 100px}
+    .hero-copy{max-width:760px}
+    .hero-kicker{display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.78);margin:0 0 24px}
+    .hero-kicker:before{content:"";width:38px;border-top:1px solid currentColor}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2{font-family:var(--display);font-weight:500;line-height:.93;letter-spacing:-.035em}
+    h1{font-size:var(--display-size);margin-bottom:28px;max-width:740px}
+    h1 em{font-weight:500;color:#e1c8b0}
+    .hero-text{max-width:520px;color:rgba(255,255,255,.82);margin:0 0 34px}
+    .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:20px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:54px;padding:0 22px;border:1px solid transparent;background:var(--paper);color:var(--ink);font-size:var(--body);transition:background .2s,color .2s,border-color .2s}
+    .button:hover{background:#e7dfd3}
+    .button-arrow{font-size:var(--body);line-height:1}
+    .hero-note{font-size:var(--small);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+    .hero-index{position:absolute;right:32px;bottom:28px;color:rgba(255,255,255,.8);display:flex;align-items:center;gap:12px}
+    .hero-index:before{content:"";width:64px;border-top:1px solid rgba(255,255,255,.6)}
+    .section{padding:clamp(88px,12vw,168px) 0}
+    .section-head{display:grid;grid-template-columns:1.1fr .7fr;gap:80px;align-items:end;margin-bottom:58px}
+    .eyebrow{color:var(--wine);margin-bottom:20px}
+    h2{font-size:clamp(44px,6vw,80px);margin:0;max-width:900px}
+    .section-intro{max-width:410px;color:#5e5c56;margin:0 0 7px}
+    .manifesto{background:#e8e4dc}
+    .manifesto-grid{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:start}
+    .manifesto h2{max-width:650px}
+    .manifesto-side{padding-top:9px;max-width:490px}
+    .manifesto-side p{color:#55534e;margin:0 0 30px}
+    .wordmark{border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:18px;color:var(--muted)}
+    .stories{background:var(--paper)}
+    .story-top{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}
+    .story-top h2{max-width:790px}
+    .story-track{display:grid;grid-auto-columns:minmax(280px,31%);grid-auto-flow:column;gap:16px;overflow-x:auto;padding:0 0 18px;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-color:#8b8982 transparent;scrollbar-width:thin}
+    .story-card{position:relative;isolation:isolate;aspect-ratio:4/5;min-height:400px;background:#d8d4cc;overflow:hidden;scroll-snap-align:start;color:#fff}
+    .story-card img{position:absolute;inset:0;z-index:-2;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+    .story-card:hover img{transform:scale(1.035)}
+    .story-card:after{position:absolute;content:"";z-index:-1;inset:0;background:linear-gradient(0deg,rgba(15,15,14,.8),transparent 64%)}
+    .story-card--light{color:var(--ink);background:#e5e0d6}
+    .story-card--light:after{background:linear-gradient(0deg,rgba(20,20,19,.66),transparent 65%)}
+    .story-card--graphic{background:linear-gradient(145deg,#eee8dc 5%,#c7b8a6 53%,#79645b)}
+    .story-card--graphic:before{position:absolute;content:"";width:68%;height:70%;border:1px solid rgba(255,255,255,.55);border-radius:50% 50% 2px 2px;left:16%;top:8%;transform:rotate(8deg)}
+    .story-card--graphic:after{background:linear-gradient(0deg,rgba(15,15,14,.76),transparent 65%)}
+    .story-card--sage{background:linear-gradient(140deg,#d4d5ca,#818878 65%,#42453f)}
+    .story-card--sage:before{position:absolute;content:"";width:55%;height:50%;left:23%;top:14%;border:1px solid rgba(255,255,255,.65);border-radius:50%;transform:rotate(-28deg)}
+    .story-card--sage:after{background:linear-gradient(0deg,rgba(15,15,14,.8),transparent 65%)}
+    .story-card-content{position:absolute;left:26px;right:26px;bottom:26px}
+    .story-label{margin:0 0 12px;color:rgba(255,255,255,.8)}
+    .story-card h3{font-family:var(--display);font-size:clamp(34px,3.3vw,48px);font-weight:500;line-height:.98;margin:0 0 12px;letter-spacing:-.02em}
+    .story-card p{margin:0;color:rgba(255,255,255,.84);max-width:330px}
+    .story-footer{display:flex;justify-content:space-between;gap:20px;color:var(--muted);margin-top:22px}
+    .builder{background:#e8e4dc}
+    .builder .section-head{margin-bottom:48px}
+    .builder-shell{background:#191a1b;border-radius:20px;box-shadow:0 34px 90px rgba(22,22,20,.19);padding:12px;color:#fff;max-width:1200px;margin:auto}
+    .window-bar{height:40px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 12px 9px;color:#a4a4a2}
+    .traffic{display:flex;gap:7px}
+    .traffic span{height:9px;width:9px;border-radius:50%;background:#ef6358}
+    .traffic span:nth-child(2){background:#f5bd4f}.traffic span:nth-child(3){background:#62c554}
+    .window-title{font-size:var(--small);letter-spacing:.04em}
+    .window-mark{justify-self:end;font-size:var(--small);letter-spacing:.12em}
+    .builder-app{display:grid;grid-template-columns:.9fr 1.1fr;min-height:470px;background:#f5f5f2;color:var(--ink);border-radius:12px;overflow:hidden}
+    .builder-controls{padding:clamp(26px,4vw,50px);border-right:1px solid #deddd8}
+    .app-overline{color:var(--muted);margin-bottom:10px}
+    .builder-controls h3{font-family:var(--display);font-weight:500;font-size:clamp(38px,4.2vw,58px);line-height:.95;margin:0 0 32px;letter-spacing:-.03em}
+    .choice-group{padding:0 0 22px;margin:0 0 22px;border-bottom:1px solid #d9d8d2}
+    .choice-title{font-size:var(--small);letter-spacing:.1em;text-transform:uppercase;color:#74716b;margin-bottom:12px}
+    .choices{display:flex;flex-wrap:wrap;gap:7px}
+    .choice{background:transparent;border:1px solid #d1cfc8;padding:9px 12px;border-radius:99px;cursor:pointer;transition:.2s}
+    .choice:hover{border-color:var(--ink)}
+    .choice[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .app-result{background:#e5e3dd;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(26px,4vw,50px);overflow:hidden}
+    .app-result:before{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(99,45,56,.14);border-radius:50%;right:-230px;top:-180px;box-shadow:0 0 0 42px rgba(99,45,56,.025),0 0 0 84px rgba(99,45,56,.02)}
+    .result-top,.result-main,.result-bottom{position:relative}
+    .result-top{display:flex;justify-content:space-between;gap:20px;color:#706e67}
+    .result-number{color:var(--wine)}
+    .result-main{max-width:470px;padding:28px 0}
+    .result-kicker{color:var(--wine);margin-bottom:12px}
+    .result-main h4{font-family:var(--display);font-size:clamp(42px,5vw,68px);font-weight:500;line-height:.93;margin:0 0 18px;letter-spacing:-.03em}
+    .result-main p{color:#55534e;margin:0}
+    .result-bottom{display:flex;align-items:end;justify-content:space-between;gap:20px;border-top:1px solid rgba(23,23,21,.18);padding-top:18px}
+    .result-palette{display:flex;gap:7px}.result-palette i{width:25px;height:25px;border-radius:50%;background:#673c42}.result-palette i:nth-child(2){background:#8a826f}.result-palette i:nth-child(3){background:#cbc6b9}
+    .copy-button{background:var(--ink);border:0;color:#fff;padding:14px 16px;cursor:pointer;transition:background .2s}
+    .copy-button:hover{background:var(--wine)}
+    .builder-note{margin:18px auto 0;max-width:1200px;color:#68665f;display:flex;justify-content:space-between;gap:18px}
+    .gallery{background:#171715;color:#fff;overflow:hidden}
+    .gallery .eyebrow{color:#d3b69f}
+    .gallery .section-intro{color:rgba(255,255,255,.68)}
+    .gallery .section-head{grid-template-columns:1.1fr .6fr}
+    .gallery-track{display:grid;grid-auto-columns:minmax(300px,42%);grid-auto-flow:column;gap:18px;overflow-x:auto;padding:0 0 20px;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-color:#98948d transparent;scrollbar-width:thin}
+    .gallery-tile{position:relative;aspect-ratio:1.34;background:#332e2b;overflow:hidden;scroll-snap-align:start}
+    .gallery-tile img{transition:transform .7s}
+    .gallery-tile:hover img{transform:scale(1.035)}
+    .gallery-tile:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.7),transparent 58%)}
+    .gallery-caption{position:absolute;z-index:1;bottom:22px;left:24px;right:24px;display:flex;align-items:end;justify-content:space-between;gap:18px}
+    .gallery-caption h3{font-family:var(--display);font-weight:500;font-size:clamp(34px,4vw,54px);line-height:.95;margin:0}
+    .gallery-caption span{color:rgba(255,255,255,.75)}
+    .gallery-note{display:flex;justify-content:space-between;gap:24px;margin-top:20px;color:rgba(255,255,255,.64)}
+    .details{background:var(--paper)}
+    .details-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:10vw}
+    .details-intro{position:sticky;top:32px;align-self:start}
+    .details-intro h2{margin-bottom:24px}
+    .details-intro p{max-width:400px;color:#64625c}
+    .accordions{border-top:1px solid var(--line)}
+    details{border-bottom:1px solid var(--line)}
+    summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:23px 0;font-family:var(--display);font-size:clamp(30px,3vw,40px);line-height:1.05}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-family:var(--ui);font-size:var(--body);transition:transform .2s}
+    details[open] summary:after{transform:rotate(45deg)}
+    details p{max-width:620px;color:#64625c;margin:0 34px 24px 0}
+    .end-cta{background:#ded9d0;padding:clamp(72px,10vw,130px) 0}
+    .end-cta-inner{display:flex;align-items:end;justify-content:space-between;gap:40px}
+    .end-cta h2{max-width:800px}
+    .end-cta .button{background:var(--ink);color:#fff;white-space:nowrap}
+    .end-cta .button:hover{background:var(--wine)}
+    footer{background:var(--ink);color:#fff;padding:26px 0}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;color:rgba(255,255,255,.7)}
+    .footer-inner .brand{color:#fff}
+    .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,16px);opacity:0;pointer-events:none;background:#171715;color:#fff;padding:14px 20px;z-index:20;transition:.25s}
+    .toast.is-visible{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:900px){.wrap{width:min(calc(100% - 40px),var(--wrap))}.main-nav{gap:16px}.section-head{gap:40px}.story-track{grid-auto-columns:minmax(280px,45%)}.gallery-track{grid-auto-columns:minmax(290px,58%)}.builder-app{grid-template-columns:1fr}.builder-controls{border:0;border-bottom:1px solid #deddd8}.app-result{min-height:370px}.details-layout{gap:6vw}}
+    @media(max-width:640px){:root{--display-size:clamp(54px,16vw,82px)}.wrap{width:calc(100% - 36px)}.topline{height:30px}.header-inner{height:66px;gap:12px}.main-nav{display:none}.header-contact{padding:10px 12px}.hero{min-height:720px;min-height:calc(100svh - 96px);max-height:860px}.hero-image img{object-position:59% center}.hero-shade{background:linear-gradient(90deg,rgba(18,18,17,.69),rgba(18,18,17,.08) 100%),linear-gradient(0deg,rgba(18,18,17,.72),rgba(18,18,17,.05) 85%)}.hero-inner{align-items:end;padding-block:80px 72px}.hero-copy{max-width:100%}.hero-kicker{margin-bottom:18px}.hero-text{max-width:450px}.hero-actions{align-items:flex-start;flex-direction:column;gap:14px}.hero-index{right:18px;bottom:18px}.section{padding:82px 0}.section-head,.manifesto-grid,.details-layout{grid-template-columns:1fr;gap:26px}.section-head{margin-bottom:36px;align-items:start}.story-top{display:block}.story-top h2{margin-bottom:14px}.story-track{grid-auto-columns:minmax(270px,82%);gap:12px}.story-card{min-height:420px}.story-footer{font-size:var(--small)}.builder-shell{padding:7px;border-radius:15px}.window-bar{height:36px}.builder-controls,.app-result{padding:24px 18px}.builder-controls h3{margin-bottom:26px}.choices{gap:6px}.choice{padding:8px 10px}.app-result{min-height:380px}.result-bottom{align-items:start;flex-direction:column}.copy-button{width:100%}.builder-note{display:block}.builder-note span{display:block;margin-top:8px}.gallery .section-head{grid-template-columns:1fr;gap:26px}.gallery-track{grid-auto-columns:minmax(280px,86%);gap:12px}.gallery-tile{aspect-ratio:1.05}.gallery-caption{left:18px;right:18px;bottom:18px}.gallery-note{display:block}.gallery-note span{display:block;margin-top:8px}.details-intro{position:static}.end-cta-inner{display:block}.end-cta h2{margin-bottom:28px}.footer-inner{align-items:flex-start;flex-direction:column;gap:12px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="topline micro">СЕЗОННЫЕ ЦВЕТОЧНЫЕ ИСТОРИИ ДЛЯ БУТИКОВ И ШОУРУМОВ</div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="https://nastebel.ru/" aria-label="NASTEBEL — на главную">NASTEBEL</a>
+      <nav class="main-nav micro" aria-label="Навигация"><a href="#idea">Идея</a><a href="#seasons">Сезонные истории</a><a href="#builder">Конструктор</a><a href="#details">Детали</a></nav>
+      <a class="header-contact" href="https://t.me/nastebel_zakaz" target="_blank" rel="noopener">Связаться <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image"><img src="showroom-hero.jpg" alt="Сезонная композиция в интерьере модного шоурума" fetchpriority="high"></div>
+      <div class="hero-shade"></div>
+      <div class="wrap hero-inner"><div class="hero-copy">
+        <p class="hero-kicker micro">NASTEBEL / RETAIL EDITION</p>
+        <h1 id="hero-title">Цветы — часть <em>коллекции</em></h1>
+        <p class="hero-text">Оформляем бутики и шоурумы так, чтобы пространство продолжало характер бренда — и меняло настроение вместе с сезоном.</p>
+        <div class="hero-actions"><a class="button" href="#builder">Собрать сценарий <span class="button-arrow" aria-hidden="true">↗</span></a><span class="hero-note">Флористика как часть образа бренда</span></div>
+      </div></div>
+      <div class="hero-index micro">01 — 04&nbsp;&nbsp; SPACE EDIT</div>
+    </section>
+
+    <section class="section manifesto" id="idea">
+      <div class="wrap manifesto-grid">
+        <div><p class="eyebrow micro">НЕ ПРОСТО ДЕКОР</p><h2>Сначала замечают. Потом запоминают.</h2></div>
+        <div class="manifesto-side"><p>Цветы могут поддержать запуск новой коллекции, задать сезонное настроение или стать точкой, у которой хочется остановиться. Так интерьер не спорит с брендом, а продолжает его историю.</p><div class="wordmark micro"><span>НАСТРОЕНИЕ</span><span>ПРОСТРАНСТВО</span><span>БРЕНД</span></div></div>
+      </div>
+    </section>
+
+    <section class="section stories" id="seasons">
+      <div class="wrap">
+        <div class="story-top"><div><p class="eyebrow micro">СЕЗОННЫЕ ИСТОРИИ / ВИЗУАЛЬНЫЕ НАПРАВЛЕНИЯ</p><h2>Новая коллекция пространства</h2></div><p class="section-intro">Листайте идеи вручную. Подберём композицию и масштаб под интерьер, сезон и задачу бренда.</p></div>
+        <div class="story-track" tabindex="0" aria-label="Горизонтальная лента сезонных идей">
+          <article class="story-card"><img src="showroom-edit.jpg" alt="Бордовая сезонная флористика в модном шоуруме" loading="lazy"><div class="story-card-content"><p class="story-label micro">01 / AUTUMN EDIT</p><h3>Тёплый сезон</h3><p>Глубокие оттенки, выразительная фактура и спокойный свет.</p></div></article>
+          <article class="story-card story-card--graphic"><div class="story-card-content"><p class="story-label micro">02 / NEW COLLECTION</p><h3>Новый дроп</h3><p>Флористический акцент, который поддерживает запуск коллекции.</p></div></article>
+          <article class="story-card story-card--sage"><div class="story-card-content"><p class="story-label micro">03 / IN-STORE MOMENT</p><h3>Точка внимания</h3><p>Композиция у витрины, примерочной или в зоне встречи.</p></div></article>
+          <article class="story-card story-card--light"><img src="showroom-hero.jpg" alt="Цветочная инсталляция в бутике как элемент оформления" loading="lazy"><div class="story-card-content"><p class="story-label micro">04 / CAMPAIGN SPACE</p><h3>Кадр для бренда</h3><p>Выразительный фон для презентации, события или фотографий.</p></div></article>
+        </div>
+        <div class="story-footer micro"><span>ВИЗУАЛЬНЫЕ ОБРАЗЫ, НЕ КЕЙСЫ</span><span>ПРОЛИСТНИТЕ ЛЕНТУ →</span></div>
+      </div>
+    </section>
+
+    <section class="section builder" id="builder">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow micro">SPACE STYLER / 01</p><h2>Соберите настроение</h2></div><p class="section-intro">Небольшой бриф вместо калькулятора. Выберите несколько ориентиров — и получите основу для разговора с мастерской.</p></div>
+        <div class="builder-shell">
+          <div class="window-bar"><div class="traffic" aria-hidden="true"><span></span><span></span><span></span></div><div class="window-title">NASTEBEL — space styler</div><div class="window-mark">STUDIO / 01</div></div>
+          <div class="builder-app">
+            <div class="builder-controls">
+              <p class="app-overline micro">СОБРАТЬ БРИФ</p><h3>Ваше пространство, ваш сезон</h3>
+              <div class="choice-group" data-group="season"><div class="choice-title">Сезон</div><div class="choices"><button class="choice" aria-pressed="false" data-value="Весна">Весна</button><button class="choice" aria-pressed="false" data-value="Лето">Лето</button><button class="choice" aria-pressed="true" data-value="Осень">Осень</button><button class="choice" aria-pressed="false" data-value="Зима">Зима</button></div></div>
+              <div class="choice-group" data-group="purpose"><div class="choice-title">Задача</div><div class="choices"><button class="choice" aria-pressed="true" data-value="Новая коллекция">Новая коллекция</button><button class="choice" aria-pressed="false" data-value="Фотозона">Фотозона</button><button class="choice" aria-pressed="false" data-value="Настроение интерьера">Настроение интерьера</button></div></div>
+              <div class="choice-group" data-group="scale"><div class="choice-title">Масштаб</div><div class="choices"><button class="choice" aria-pressed="true" data-value="Одна зона">Одна зона</button><button class="choice" aria-pressed="false" data-value="Несколько точек">Несколько точек</button><button class="choice" aria-pressed="false" data-value="Акцентная инсталляция">Акцентная инсталляция</button></div></div>
+            </div>
+            <div class="app-result" aria-live="polite">
+              <div class="result-top micro"><span>ВАШ SPACE-БРИФ</span><span class="result-number">NASTEBEL / 001</span></div>
+              <div class="result-main"><p class="result-kicker micro" id="briefSeason">ОСЕНЬ · НОВАЯ КОЛЛЕКЦИЯ</p><h4 id="briefTitle">Тёплый акцент</h4><p id="briefText">Композиция у входа или в зоне знакомства с коллекцией. Масштаб подбирается под пространство.</p></div>
+              <div class="result-bottom"><div><div class="choice-title">Цветовое направление</div><div class="result-palette" id="palette" aria-label="Бордовый, оливковый, молочный"><i></i><i></i><i></i></div></div><button class="copy-button" id="copyBrief" type="button">Скопировать бриф ↗</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="builder-note micro"><span>Это не смета и не финальный дизайн-проект</span><span>Итоговые детали согласуем вместе</span></div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow micro">ФЛОРИСТИКА В ПРОСТРАНСТВЕ</p><h2>Один образ — много точек контакта</h2></div><p class="section-intro">Широкая лента визуальных направлений: от сезонной композиции до выразительного элемента для новой коллекции.</p></div>
+        <div class="gallery-track" tabindex="0" aria-label="Листайте горизонтальную галерею">
+          <article class="gallery-tile"><img src="showroom-hero.jpg" alt="Бордовые ветви и сезонные цветы в шоуруме" loading="lazy"><div class="gallery-caption"><h3>Витрина и вход</h3><span class="micro">01 / MEET</span></div></article>
+          <article class="gallery-tile"><img src="showroom-edit.jpg" alt="Флористический акцент рядом с коллекцией одежды" loading="lazy"><div class="gallery-caption"><h3>Внутри коллекции</h3><span class="micro">02 / STYLE</span></div></article>
+        </div>
+        <div class="gallery-note micro"><span>ОБРАЗЫ ДЛЯ ОБСУЖДЕНИЯ</span><span>СМЕНА СЕЗОНА МОЖЕТ МЕНЯТЬ ИНТОНАЦИЮ, СОХРАНЯЯ ХАРАКТЕР БРЕНДА</span></div>
+      </div>
+    </section>
+
+    <section class="section details" id="details">
+      <div class="wrap details-layout">
+        <div class="details-intro"><p class="eyebrow micro">ПЕРЕД СТАРТОМ</p><h2>Детали, которые держат стиль</h2><p>Обсудим задачу, пространство и желаемый эффект — без готовых шаблонов. Подходящий формат найдём вместе.</p></div>
+        <div class="accordions">
+          <details><summary>С чего начинается оформление?</summary><p>С короткого разговора о бренде, интерьере, сезонной задаче и точках, которые важно выделить. Можно начать с одной зоны.</p></details>
+          <details><summary>Можно ли связать цветы с новой коллекцией?</summary><p>Да. Возьмём за ориентир настроение коллекции, её палитру и материалы, а затем предложим цветочное направление для пространства.</p></details>
+          <details><summary>Как меняется оформление по сезонам?</summary><p>Состав и оттенки можно менять в течение года. Ритм обновления, подходящие растения и бюджет обсуждаем перед началом работы.</p></details>
+          <details><summary>Что, если нужна фотозона или акцентная инсталляция?</summary><p>Определим место, масштаб и сценарий использования. После этого предложим формат оформления и обсудим, как он будет сочетаться с интерьером.</p></details>
+          <details><summary>Какие цветы используются?</summary><p>Для регулярной подписки — живые цветы. Для разовых поставок можно обсудить сухоцветы, стабилизированные цветы и стойкие композиции.</p></details>
+          <details><summary>Можно ли начать с разового заказа?</summary><p>Да. Сначала можно оформить событие, сезонное обновление или запуск коллекции, а затем решить, нужен ли регулярный формат.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="end-cta"><div class="wrap end-cta-inner"><div><p class="eyebrow micro">NASTEBEL / SHOWROOM EDITION</p><h2>Пусть пространство продолжает вашу историю</h2></div><a class="button" href="https://t.me/nastebel_zakaz" target="_blank" rel="noopener">Обсудить оформление <span class="button-arrow" aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><a class="brand" href="https://nastebel.ru/">NASTEBEL</a><span>Цветочное оформление бутиков и шоурумов</span><a href="mailto:Nastebel.flow@gmail.com">Nastebel.flow@gmail.com</a><a href="https://nastebel.ru/">nastebel.ru ↗</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite">Бриф скопирован</div>
+  <script>
+    'use strict';
+    const selections={season:'Осень',purpose:'Новая коллекция',scale:'Одна зона'};
+    const seasonData={
+      'Весна':{title:'Лёгкое обновление',colors:['#9da48f','#d6d1c2','#eeeae0'],label:'шалфейный, молочный, светлый'},
+      'Лето':{title:'Живой акцент',colors:['#c86a4e','#e5b26c','#eee4d1'],label:'терракота, тёплый жёлтый, кремовый'},
+      'Осень':{title:'Тёплый акцент',colors:['#673c42','#8a826f','#cbc6b9'],label:'бордовый, оливковый, молочный'},
+      'Зима':{title:'Собранный образ',colors:['#303b3b','#ebe8df','#8e5551'],label:'хвойный, холодный белый, глубокий красный'}
+    };
+    const purposeData={
+      'Новая коллекция':'Поддержим настроение коллекции акцентом у входа или в зоне знакомства с ней.',
+      'Фотозона':'Продуманный фон для фотографий, событий и визуального контента бренда.',
+      'Настроение интерьера':'Композиция, которая связывает интерьер, фактуры и сезонную палитру.'
+    };
+    function updateBrief(){
+      const season=selections.season, goal=selections.purpose, scale=selections.scale, style=seasonData[season];
+      document.getElementById('briefSeason').textContent=season.toUpperCase()+' · '+goal.toUpperCase();
+      document.getElementById('briefTitle').textContent=style.title;
+      document.getElementById('briefText').textContent=purposeData[goal]+' Масштаб: '+scale.toLowerCase()+'.';
+      const swatches=document.querySelectorAll('#palette i');
+      style.colors.forEach((color,index)=>swatches[index].style.background=color);
+      document.getElementById('palette').setAttribute('aria-label',style.label);
+    }
+    document.querySelectorAll('.choice-group').forEach(group=>group.addEventListener('click',event=>{
+      const button=event.target.closest('.choice'); if(!button)return;
+      group.querySelectorAll('.choice').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+      selections[group.dataset.group]=button.dataset.value; updateBrief();
+    }));
+    document.getElementById('copyBrief').addEventListener('click',async event=>{
+      const text='Хочу обсудить оформление бутика или шоурума. Сезон: '+selections.season+'. Задача: '+selections.purpose+'. Масштаб: '+selections.scale+'.';
+      try{await navigator.clipboard.writeText(text);}catch(error){const area=document.createElement('textarea');area.value=text;document.body.append(area);area.select();document.execCommand('copy');area.remove();}
+      const button=event.currentTarget,toast=document.getElementById('toast');button.textContent='Бриф скопирован ✓';toast.classList.add('is-visible');setTimeout(()=>{button.textContent='Скопировать бриф ↗';toast.classList.remove('is-visible');},2200);
+    });
+    updateBrief();
+  </script>
+</body>
+</html>
