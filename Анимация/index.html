@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>NASTEBEL · Один день мастерской</title>
+<style>
+:root{--ink:#243d34;--muted:#7b877f;--line:#e6ebe5;--green:#466d53;--cream:#f5f5ed;--rose:#c77781}*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid #b8c796;outline-offset:4px}header{max-width:1240px;margin:auto;padding:30px 32px 12px;display:flex;justify-content:space-between;align-items:center}.brand{font-size:19px;letter-spacing:4px;font-weight:700}.tag{font-size:12px;color:var(--muted);letter-spacing:.08em}.intro{max-width:1240px;margin:auto;padding:18px 32px 0;display:flex;justify-content:space-between;gap:25px;align-items:end}h1{font-family:Georgia,serif;font-size:clamp(30px,4vw,46px);font-weight:400;letter-spacing:-1.5px;margin:0 0 12px}.intro p{font-size:14px;line-height:1.6;color:var(--muted);margin:0;max-width:480px}.pill{display:flex;align-items:center;gap:8px;background:#f3f6ef;border-radius:30px;padding:10px 14px;font-size:12px;white-space:nowrap}.dot{width:6px;height:6px;background:#719268;border-radius:50%}.scene-wrap{max-width:1300px;margin:12px auto 0;position:relative}.viewport{overflow:auto;scrollbar-width:thin;border-radius:16px;touch-action:pan-x pan-y}.scene{width:100%;display:block;height:auto;min-width:0;user-select:none}.scene text{font-family:Arial,Helvetica,sans-serif;pointer-events:none}.zoom-tools{position:absolute;right:28px;top:16px;display:flex;gap:4px;border:1px solid var(--line);padding:4px;border-radius:12px;background:#fff}.zoom-tools button{background:transparent;border:0;border-radius:7px;min-height:34px;min-width:36px;color:var(--ink);font-size:19px}.zoom-tools button:hover{background:var(--cream)}.hint{position:absolute;left:34px;bottom:16px;font-size:11px;color:var(--muted)}.console{max-width:1176px;margin:0 auto 32px;padding:24px;border:1px solid var(--line);border-radius:20px;background:#fff}.now{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}.eyebrow{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:7px}.status{font-size:19px;font-weight:500;min-height:24px}.cargo{font-size:12px;color:var(--muted);display:flex;gap:7px;align-items:center}.cargo i{font-style:normal;font-size:19px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:22px}.step{border:0;border-top:2px solid var(--line);padding:12px 0 0;background:transparent;text-align:left;font-size:12px;color:var(--muted);display:flex;gap:8px}.step b{font-weight:400;opacity:.6}.step.active{border-color:var(--green);color:var(--ink)}.step.done{border-color:#bbcdb1}.play-controls{display:flex;gap:10px;align-items:center}.control{border:1px solid var(--line);background:white;color:var(--ink);border-radius:11px;padding:11px 14px;font-size:12px;min-height:40px;white-space:nowrap}.primary{background:var(--ink);color:white;border-color:var(--ink);min-width:112px}.control:hover{filter:brightness(.94)}.speed{border:1px solid var(--line);background:white;color:var(--ink);border-radius:11px;padding:10px;font-size:12px}.timeline{flex:1;accent-color:var(--green);min-width:30px;height:22px;cursor:pointer}.clock{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}.footer{max-width:1176px;padding:0 24px 24px;margin:auto;display:flex;gap:20px;justify-content:space-between;color:var(--muted);font-size:11px;line-height:1.7}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.location{cursor:pointer}.location:hover .building-label{fill:#466d53}.location:focus .building-label{fill:#466d53}noscript{display:block;padding:20px;text-align:center}
+@media(max-width:700px){header{padding:24px 20px 10px}.brand{font-size:15px;letter-spacing:3px}.tag{font-size:10px}.intro{padding:15px 20px 0;display:block}.intro p{font-size:13px}.pill{display:none}.scene-wrap{margin-top:10px}.scene{min-width:700px}.viewport{max-height:550px}.zoom-tools{right:12px;top:8px}.hint{left:20px;bottom:5px;background:#ffffffd9;padding:4px 7px;border-radius:5px}.console{margin:18px 12px 24px;padding:18px 16px;border-radius:15px}.now{display:block}.status{font-size:17px}.cargo{margin-top:9px}.steps{gap:10px}.step{font-size:11px;line-height:1.5;display:block}.step b{display:block;margin-bottom:4px}.play-controls{flex-wrap:wrap;gap:8px}.timeline{order:4;flex-basis:calc(100% - 92px);margin-top:8px}.clock{order:5;margin-top:8px}.footer{padding:0 20px 25px;display:block}.footer span{display:block;margin-bottom:6px}}
+</style>
+</head>
+<body>
+<header><div class="brand">NASTEBEL</div><div class="tag">МАСТЕРСКАЯ В ДВИЖЕНИИ</div></header>
+<main>
+<div class="intro"><div><h1>У цветов есть маршрут.</h1><p>От утренней закупки до букета в вашем пространстве.<br>Маленький город и один день цветочной мастерской.</p></div><div class="pill"><span class="dot"></span><span id="playState">Маршрут запущен</span></div></div>
+<div class="scene-wrap">
+<div class="viewport" id="viewport">
+<svg class="scene" id="scene" viewBox="0 0 1320 935" role="img" aria-labelledby="sceneTitle sceneDesc" xmlns="http://www.w3.org/2000/svg">
+<title id="sceneTitle">Изометрический город цветочной мастерской NASTEBEL</title>
+<desc id="sceneDesc">Флорист закупает цветы на двух складах, собирает букеты в мастерской и развозит их трём клиентам. После нового заказа маршрут повторяется.</desc>
+<defs>
+<filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="10"/></filter>
+<linearGradient id="grass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f2f4e9"/><stop offset="1" stop-color="#e9eedf"/></linearGradient>
+<pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".65" fill="#b5c7a8" opacity=".25"/></pattern>
+</defs>
+<g id="ground"></g><g id="roads"></g><g id="decor"></g><g id="route"></g><g id="world"></g><g id="labels"></g><g id="bubble"></g>
+</svg>
+</div>
+<div class="zoom-tools" aria-label="Масштаб сцены"><button id="zoomOut" aria-label="Уменьшить">−</button><button id="zoomReset" aria-label="Исходный масштаб" style="font-size:11px">1×</button><button id="zoomIn" aria-label="Увеличить">+</button></div>
+<span class="hint">Нажмите на здание, чтобы перейти к этому этапу</span>
+</div>
+<section class="console" aria-label="Управление анимацией">
+<div class="now"><div><div class="eyebrow" id="phase">01 / ЗАКУПКА</div><div class="status" id="status" aria-live="polite">Едем за свежими цветами</div></div><div class="cargo"><i aria-hidden="true">✿</i><span id="cargo">В машине пока пусто</span></div></div>
+<nav class="steps" aria-label="Этапы маршрута"><button class="step active" data-step="0"><b>01</b> Закупка цветов</button><button class="step" data-step="1"><b>02</b> Сборка в мастерской</button><button class="step" data-step="2"><b>03</b> Доставка клиентам</button><button class="step" data-step="3"><b>04</b> Новый заказ</button></nav>
+<div class="play-controls"><button class="control primary" id="play">Ⅱ Пауза</button><button class="control" id="restart" aria-label="Начать маршрут сначала">↺ Сначала</button><label class="sr-only" for="speed">Скорость анимации</label><select class="speed" id="speed"><option value="1">Скорость 1×</option><option value="1.5">1,5×</option><option value="2">2×</option><option value="3">3×</option></select><label class="sr-only" for="timeline">Положение на маршруте</label><input class="timeline" id="timeline" type="range" min="0" max="1000" value="0" step="1"><span class="clock" id="clock">0:00 / 0:00</span></div>
+</section>
+</main>
+<div class="footer"><span>Закупка → сборка → доставка → новый заказ. Цикл повторяется автоматически.</span><span>Изометрический прототип · Работает без интернета</span></div>
+<noscript>Для анимации включите JavaScript в браузере.</noscript>
+<script>
+(()=>{
+'use strict';
+const NS='http://www.w3.org/2000/svg';
+const $=id=>document.getElementById(id);
+function el(tag,attrs={},parent){const n=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,v);if(parent)parent.appendChild(n);return n}
+function p(x,y,z=0){return[640+(x-y)*.74,153+(x+y)*.37-z]}
+const pts=a=>a.map(q=>q.map(v=>+v.toFixed(2)).join(',')).join(' ');
+const poly=(a,c,g,more={})=>el('polygon',{points:pts(a),fill:c,...more},g);
+const line=(a,c,w,g,more={})=>el('polyline',{points:pts(a),fill:'none',stroke:c,'stroke-width':w,'stroke-linecap':'round','stroke-linejoin':'round',...more},g);
+const circle=(x,y,r,c,g,more={})=>el('circle',{cx:x,cy:y,r,fill:c,...more},g);
+function txt(x,y,s,size,color,g,more={}){const t=el('text',{x,y,fill:color,'font-size':size,...more},g);t.textContent=s;return t}
+const lerp=(a,b,t)=>a+(b-a)*t;
+const mix=(a,b,t)=>[lerp(a[0],b[0],t),lerp(a[1],b[1],t)];
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function box(x,y,w,d,h,colors,g,z=0){poly([p(x,y,z+h),p(x+w,y,z+h),p(x+w,y+d,z+h),p(x,y+d,z+h)],colors[0],g);poly([p(x,y+d,z),p(x+w,y+d,z),p(x+w,y+d,z+h),p(x,y+d,z+h)],colors[2],g);poly([p(x+w,y,z),p(x+w,y+d,z),p(x+w,y+d,z+h),p(x+w,y,z+h)],colors[1],g)}
+function faceY(x,y,z,w,h,c,g){return poly([p(x,y,z),p(x+w,y,z),p(x+w,y,z+h),p(x,y,z+h)],c,g)}
+function faceX(x,y,z,d,h,c,g){return poly([p(x,y,z),p(x,y+d,z),p(x,y+d,z+h),p(x,y,z+h)],c,g)}
+function flower(x,y,sz,g,variant=0){line([[x,y+sz*.8],[x,y-sz*.3]],'#68816a',Math.max(1,sz*.1),g);el('ellipse',{cx:x-sz*.22,cy:y+sz*.27,rx:sz*.22,ry:sz*.09,fill:'#829b75',transform:`rotate(25 ${x-sz*.22} ${y+sz*.27})`},g);const c=['#dca9ae','#ede2c5','#c78592','#e2b86d'][variant%4];for(let a=0;a<5;a++){const t=a*Math.PI*2/5;circle(x+Math.cos(t)*sz*.28,y+Math.sin(t)*sz*.28,sz*.23,c,g)}circle(x,y,sz*.12,'#d7b66d',g)}
+function bouquet(sx,sy,scale,g){const b=el('g',{transform:`translate(${sx} ${sy}) scale(${scale})`},g);poly([[-10,4],[12,4],[3,24],[-3,24]],'#c4b294',b);for(let i=0;i<5;i++)flower((i-2)*4,-5-Math.sin(i)*5,7,b,i);return b}
+const nodes=[];
+function object(x,y,g){nodes.push({depth:x+y,node:g});return g}
+const ground=$('ground'),roads=$('roads'),decor=$('decor'),world=$('world'),labels=$('labels');
+const island=[p(0,0),p(900,0),p(900,780),p(0,780)];
+poly(island.map(([x,y])=>[x,y+34]),'#91a48b',ground,{filter:'url(#shadow)',opacity:'.2'});
+poly([p(0,780),p(900,780),p(900,780,-25),p(0,780,-25)],'#d8dfcb',ground);
+poly([p(900,0),p(900,780),p(900,780,-25),p(900,0,-25)],'#c4d0bb',ground);
+poly(island,'url(#grass)',ground);
+poly(island,'url(#dots)',ground);
+// All roads and routes are defined in world coordinates.
+function road(a,width=44){line(a.map(q=>p(...q)),'#fdfdf9',width,roads);line(a.map(q=>p(...q)),'#dadfd4',1,roads,{'stroke-dasharray':'4 9'})}
+road([[280,70],[280,730]],47);road([[250,330],[850,330]],47);road([[280,565],[850,565]],47);road([[850,330],[850,565]],47);road([[650,280],[650,330]],43);road([[610,565],[610,695]],43);
+function parking(x,y){poly([p(x-40,y-35),p(x+40,y-35),p(x+40,y+35),p(x-40,y+35)],'#e4e8df',roads,{stroke:'#cad3c3','stroke-width':1});const q=p(x,y);txt(q[0],q[1]+3,'P',11,'#a2b19a',roads,{'text-anchor':'middle'})}
+[[280,147],[280,530],[650,280],[732,565],[610,680],[280,700]].forEach(q=>parking(...q));
+function tree(x,y,scale=1){const g=el('g',{},world);object(x,y,g);const q=p(x,y);el('ellipse',{cx:q[0],cy:q[1]+1,rx:16*scale,ry:7*scale,fill:'#c1d0b3',opacity:.6},g);line([[q[0],q[1]],[q[0],q[1]-40*scale]],'#a89c81',4*scale,g);el('ellipse',{cx:q[0],cy:q[1]-46*scale,rx:17*scale,ry:24*scale,fill:'#94af7e'},g);el('ellipse',{cx:q[0]-5*scale,cy:q[1]-51*scale,rx:13*scale,ry:20*scale,fill:'#adc394'},g)}
+[[30,330,.8],[50,410,1],[350,70,.8],[435,75,.7],[830,100,.9],[865,210,.8],[855,675,.9],[750,735,.7],[380,455,.65],[80,615,.55]].forEach(q=>tree(...q));
+function planter(x,y){const g=el('g',{},world);object(x+20,y+10,g);box(x,y,34,20,14,['#d4c8b0','#b8aa92','#c4b79f'],g);for(let i=0;i<5;i++){const q=p(x+5+i*6,y+10,15);flower(...q,5,g,i)}}
+[[228,80],[228,198],[230,472],[230,568],[566,229],[705,228],[790,530],[580,620],[214,730]].forEach(q=>planter(...q));
+const buildings=[
+{id:'warehouse1',name:'Цветочный склад 01',sub:'Свежие цветы',x:60,y:75,w:155,d:125,h:104,kind:'warehouse',colors:['#e9d8bd','#d2b998','#ddc7a6'],door:[218,147]},
+{id:'warehouse2',name:'Цветочный склад 02',sub:'Сезонные акценты',x:65,y:465,w:155,d:130,h:100,kind:'warehouse',colors:['#ecd9d3','#cfb1ad','#dec2b9'],door:[223,530]},
+{id:'studio',name:'Мастерская NASTEBEL',sub:'Здесь собираются букеты',x:555,y:70,w:185,d:140,h:117,kind:'studio',colors:['#e5e7d9','#afc0ab','#c9d3bb'],door:[650,238]},
+{id:'client1',name:'Клиент 01',sub:'Бутик',x:660,y:405,w:145,d:110,h:122,kind:'boutique',colors:['#e7dfd3','#c6b6a7','#d6c8b8'],door:[732,524]},
+{id:'client2',name:'Клиент 02',sub:'Клиника',x:445,y:625,w:125,d:100,h:115,kind:'clinic',colors:['#e1e9e9','#b1c6c8','#cfdddc'],door:[575,680]},
+{id:'client3',name:'Клиент 03',sub:'Мебельный салон',x:60,y:660,w:145,d:80,h:96,kind:'interior',colors:['#ddd7cb','#b4ad9f','#c9c2b2'],door:[210,700]}
+];
+const buildingGroups={};
+function build(b){const {x,y,w,d,h}=b;const g=el('g',{'class':'location','tabindex':'0','role':'button','aria-label':`Перейти: ${b.name}`},world);object(x+w/2,y+d/2,g);buildingGroups[b.id]=g;
+poly([p(x-4,y-4),p(x+w+14,y-4),p(x+w+14,y+d+12),p(x-4,y+d+12)],'#c3cbb5',g,{opacity:.35});
+box(x,y,w,d,h,b.colors,g);
+box(x-4,y-4,w+8,d+8,7,['#f9f8f1','#c9c8b8','#dfdece'],g,h);
+// roof details
+for(let i=0;i<4;i++)line([p(x+15+i*(w-30)/4,y+12,h+8),p(x+15+i*(w-30)/4,y+d-12,h+8)],'#d0cebf',1,g);
+box(x+20,y+22,35,28,10,['#d4d5cc','#adb3a8','#bcc4b5'],g,h+8);
+if(b.kind==='warehouse'){
+faceX(x+w+.2,y+20,4,d-40,69,'#5e7465',g);
+for(let i=1;i<6;i++)line([p(x+w+.4,y+20,4+i*11),p(x+w+.4,y+d-20,4+i*11)],'#8d9f89',1,g);
+faceY(x+18,y+d+.2,29,42,42,'#b4c3ad',g);faceY(x+77,y+d+.2,29,42,42,'#b4c3ad',g);
+line([p(x+39,y+d+.5,29),p(x+39,y+d+.5,71)],'#e9e7d7',2,g);line([p(x+98,y+d+.5,29),p(x+98,y+d+.5,71)],'#e9e7d7',2,g);
+box(x+w+3,y+32,19,54,16,['#c3bca4','#a89c81','#b7ac8f'],g);for(let i=0;i<6;i++){const q=p(x+w+13,y+35+i*9,26);flower(...q,7,g,i)}
+const q=p(x+w,y+d/2,88);el('rect',{x:q[0]-26,y:q[1]-8,width:52,height:17,rx:3,fill:'#faf7eb'},g);txt(q[0],q[1]+4,'FLOWERS',8,'#6f785e',g,{'text-anchor':'middle','letter-spacing':1});
+}else if(b.kind==='studio'){
+faceY(x+12,y+d+.5,5,w-24,76,'#789689',g);
+for(let i=0;i<5;i++)line([p(x+12+i*(w-24)/4,y+d+1,5),p(x+12+i*(w-24)/4,y+d+1,81)],'#cbd7bc',3,g);
+faceX(x+w+.4,y+16,18,d-32,66,'#859f8e',g);
+box(x-6,y+d,w+12,38,4,['#dcd8c8','#c5c1af','#d1cbbb'],g);
+// Worktable on the open terrace.
+box(x+57,y+d+9,64,22,5,['#c6ab83','#a08b68','#b49a74'],g,25);for(const dx of[60,114])box(x+dx,y+d+10,4,4,25,['#a89577','#8d7e65','#a18b6b'],g);
+const arrangement=el('g',{id:'arrangement'},g);for(let i=0;i<7;i++){const q=p(x+66+i*7,y+d+20,39);flower(...q,8,arrangement,i)}
+const q=p(x+w/2,y+d,94);el('rect',{x:q[0]-49,y:q[1]-9,width:98,height:20,rx:3,fill:'#f8f7ee'},g);txt(q[0],q[1]+4,'NASTEBEL',10,'#44634e',g,{'text-anchor':'middle','letter-spacing':2});
+}else{
+faceY(x+10,y+d+.3,5,w-20,74,'#82918e',g);for(let i=0;i<4;i++)line([p(x+10+i*(w-20)/3,y+d+.6,5),p(x+10+i*(w-20)/3,y+d+.6,79)],'#eae7db',3,g);
+faceX(x+w+.3,y+15,7,d-30,67,'#839893',g);
+if(b.kind==='boutique'){
+faceY(x+7,y+d+1,76,w-14,9,'#ac7d7f',g);for(let i=0;i<4;i++){const a=p(x+21+i*28,y+d+1,60);poly([[a[0]-4,a[1]],[a[0]+4,a[1]-3],[a[0]+9,a[1]+18],[a[0]-6,a[1]+20]],['#e5d8bb','#bf9a91','#acb99f','#e3ddcd'][i],g)}
+}else if(b.kind==='clinic'){
+const q=p(x+w,y+d/2,89);el('rect',{x:q[0]-3,y:q[1]-10,width:6,height:20,fill:'#f4faf6'},g);el('rect',{x:q[0]-10,y:q[1]-3,width:20,height:6,fill:'#f4faf6'},g);
+}else{
+const q=p(x+45,y+d+1,28);el('rect',{x:q[0]-17,y:q[1]-6,width:36,height:14,rx:3,fill:'#c7b496'},g);el('rect',{x:q[0]-19,y:q[1],width:40,height:11,rx:3,fill:'#dac9a8'},g);
+}
+const gift=el('g',{id:`gift-${b.id}`,opacity:0},g);const q=p(...b.door,20);bouquet(q[0]-13,q[1]-8,.72,gift);
+}
+const q=p(x+w*.45,y+d*.5,h+40);txt(q[0],q[1],b.name,13,'#43534a',labels,{'class':'building-label','text-anchor':'middle','font-weight':600});txt(q[0],q[1]+17,b.sub,10,'#8c9487',labels,{'text-anchor':'middle'});
+g.addEventListener('click',()=>jumpLocation(b.id));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();jumpLocation(b.id)}})
+}
+buildings.forEach(build);
+const carGroup=el('g',{'id':'car'},world);const personGroup=el('g',{'id':'florist'},world);const vanNode={depth:0,node:carGroup},personNode={depth:0,node:personGroup};nodes.push(vanNode,personNode);
+// Rounded road routes: the van follows real geometry, including turns.
+function path(points){const samples=[points[0]];for(let i=1;i<points.length-1;i++){const a=points[i-1],b=points[i],c=points[i+1];const before=mix(b,a,Math.min(.24,22/Math.hypot(a[0]-b[0],a[1]-b[1])));const after=mix(b,c,Math.min(.24,22/Math.hypot(c[0]-b[0],c[1]-b[1])));samples.push(before);for(let j=1;j<=12;j++){const t=j/12;samples.push([(1-t)**2*before[0]+2*(1-t)*t*b[0]+t*t*after[0],(1-t)**2*before[1]+2*(1-t)*t*b[1]+t*t*after[1]])}}
+samples.push(points[points.length-1]);const lengths=[0];for(let i=1;i<samples.length;i++)lengths.push(lengths[i-1]+Math.hypot(samples[i][0]-samples[i-1][0],samples[i][1]-samples[i-1][1]));return{samples,lengths,total:lengths.at(-1)}}
+function at(route,t){const d=clamp(t,0,1)*route.total;let i=1;while(i<route.lengths.length-1&&route.lengths[i]<d)i++;const a=route.samples[i-1],b=route.samples[i];const q=mix(a,b,(d-route.lengths[i-1])/(route.lengths[i]-route.lengths[i-1]||1));return{q,angle:Math.atan2(b[1]-a[1],b[0]-a[0])}}
+const park={warehouse1:[280,147],warehouse2:[280,530],studio:[650,280],client1:[732,565],client2:[610,680],client3:[280,700]};
+const routes={
+toW1:path([[650,280],[650,330],[280,330],[280,147]]),
+toW2:path([[280,147],[280,530]]),
+toStudio:path([[280,530],[280,330],[650,330],[650,280]]),
+toC1:path([[650,280],[650,330],[850,330],[850,565],[732,565]]),
+toC2:path([[732,565],[610,565],[610,680]]),
+toC3:path([[610,680],[610,565],[280,565],[280,700]]),
+home:path([[280,700],[280,330],[650,330],[650,280]])};
+const segments=[],starts=[0,0,0,0],locationStarts={};let total=0;let flowers=0,bunches=0;
+function add(seconds,type,text,step,options={}){segments.push({start:total,end:total+seconds,duration:seconds,type,text,step,flowers,bunches,...options});total+=seconds}
+function travel(route,text,step,loc){add(5.3,'drive',text,step,{route:routes[route],loc})}
+function stop(id,task,step){const b=buildings.find(b=>b.id===id),q=park[id],exit=[q[0]-17,q[1]+18],door=b.door;locationStarts[id]=total;
+add(.8,'exit','Паркуемся · '+b.name,step,{loc:id,q,exit,door});
+add(1.5,'walk',id==='studio'?'Несём цветы в мастерскую':step===2?'Букет для клиента':'Идём за цветами',step,{loc:id,q,exit,door});
+add(id==='studio'?5:2.1,'work',task,step,{loc:id,q,exit,door});
+if(step===0)flowers++;if(id==='studio'){flowers=0;bunches=3}if(step===2)bunches--;
+add(1.5,'back',id==='studio'?'Три букета готовы к доставке':step===2?'Возвращаемся к машине':'Забираем свежие цветы',step,{loc:id,q,exit,door});
+add(1,'load',step===0?'Укладываем цветы в машину':id==='studio'?'Загружаем букеты':'Отправляемся дальше',step,{loc:id,q,exit,door});
+add(.6,'enter','Продолжаем маршрут',step,{loc:id,q,exit,door})}
+travel('toW1','Первый склад · едем за свежими цветами',0,'warehouse1');stop('warehouse1','Выбираем и забираем свежие цветы',0);
+travel('toW2','Второй склад · сезонные цветы для композиций',0,'warehouse2');stop('warehouse2','Добавляем сезонные акценты',0);
+starts[1]=total;travel('toStudio','В мастерскую · всё для букетов собрано',1,'studio');stop('studio','Собираем три композиции для клиентов',1);
+starts[2]=total;travel('toC1','Доставка 01 · букет для бутика',2,'client1');stop('client1','Оставляем композицию в бутике',2);
+travel('toC2','Доставка 02 · цветы для клиники',2,'client2');stop('client2','Свежие цветы в зоне ожидания',2);
+travel('toC3','Доставка 03 · букет для мебельного салона',2,'client3');stop('client3','Дополняем пространство мебельного салона',2);
+starts[3]=total;travel('home','Возвращаемся в мастерскую',3,'studio');
+add(.8,'exit','Маршрут завершён · возвращаемся в мастерскую',3,{loc:'studio',q:park.studio,exit:[633,298],door:[650,238]});
+add(3.6,'phone','Новый заказ! Проверяем сообщение',3,{loc:'studio',q:park.studio,exit:[633,298],door:[650,238]});
+add(.8,'enter','Новый маршрут · поехали за цветами',3,{loc:'studio',q:park.studio,exit:[633,298],door:[650,238]});
+// Van mesh, rotated in the world, then projected into isometric screen space.
+let lastAngle=-Math.PI/2;
+function van(q,angle,cargo,drive,u){carGroup.replaceChildren();const cs=Math.cos(angle),sn=Math.sin(angle);const v=(a,b,z=0)=>p(q[0]+a*cs-b*sn,q[1]+a*sn+b*cs,z);
+poly([v(-35,-20),v(36,-20),v(36,22),v(-35,22)],'#7b8e72',carGroup,{opacity:.16});
+const mesh=[];function slab(a,b,w,d,z,h,col){const A=[a,b,z],B=[a+w,b,z],C=[a+w,b+d,z],D=[a,b+d,z];const tops=[A,B,C,D].map(t=>[t[0],t[1],t[2]+h]);const points=[A,B,C,D];for(let i=0;i<4;i++){const j=(i+1)%4;const aa=points[i],bb=points[j];const wx=(aa[0]+bb[0])/2*cs-(aa[1]+bb[1])/2*sn;const wy=(aa[0]+bb[0])/2*sn+(aa[1]+bb[1])/2*cs;mesh.push({depth:wx+wy,points:[v(...aa),v(...bb),v(...tops[j]),v(...tops[i])],color:col[i%2+1]})}mesh.sort((a,b)=>a.depth-b.depth);for(const f of mesh)poly(f.points,f.color,carGroup);mesh.length=0;poly(tops.map(t=>v(...t)),col[0],carGroup)}
+// Wheels lie below the body and have visible tyre/hub details.
+const wheels=[];for(const a of[-21,20])for(const b of[-16,16]){const a2=q[0]+a*cs-b*sn,b2=q[1]+a*sn+b*cs;wheels.push({a,b,depth:a2+b2})}wheels.sort((a,b)=>a.depth-b.depth);
+for(const w of wheels){const t=v(w.a,w.b,8);el('ellipse',{cx:t[0],cy:t[1],rx:7,ry:9,fill:'#33413c'},carGroup);el('ellipse',{cx:t[0],cy:t[1],rx:3,ry:4,fill:'#bbc2b9'},carGroup);if(drive)line([[t[0],t[1]],[t[0]+Math.cos(u*40)*3,t[1]+Math.sin(u*40)*4]],'#e7e8dc',.8,carGroup)}
+slab(-32,-15,65,30,10,23,['#f7f3e7','#d1d8ca','#e5e8da']);
+slab(-31,-15,40,30,33,15,['#f8f6ec','#dce1d2','#e9eadd']);
+slab(9,-14,20,28,33,13,['#a4b9ae','#6a877b','#8ea89b']);
+// A forward hood gives the car a readable direction.
+poly([v(29,-14,29),v(36,-14,29),v(36,14,29),v(29,14,29)],'#ebecdf',carGroup);
+for(const b of[-10,10]){const t=v(36,b,22);circle(t[0],t[1],2,'#efd9a5',carGroup)}
+const nearSide=cs+sn>=0?15:-15;const sign=v(-11,nearSide,26);txt(sign[0],sign[1]+2,'N',10,'#507158',carGroup,{'text-anchor':'middle','font-weight':700});
+for(let i=0;i<cargo;i++){const t=v(-21+i*11,0,51);bouquet(t[0],t[1]-4,.33,carGroup)}
+vanNode.depth=q[0]+q[1]+25;
+}
+function woman(q,action,u,carried){personGroup.replaceChildren();const [x,y]=p(...q);const g=el('g',{transform:`translate(${x} ${y})`},personGroup);const walking=action==='walk'||action==='back';const sway=walking?Math.sin(u*18)*2:0;
+el('ellipse',{cx:0,cy:0,rx:11,ry:4,fill:'#61765a',opacity:.18},g);
+line([[-3,-17],[-4+sway,-2]],'#555b4c',3,g);line([[3,-17],[4-sway,-2]],'#555b4c',3,g);line([[-4+sway,-1],[-1+sway,-1]],'#353f35',3,g);line([[4-sway,-1],[7-sway,-1]],'#353f35',3,g);
+const body=el('g',{transform:`translate(0 ${walking?Math.abs(sway)*-.3:0})`},g);
+poly([[-6,-35],[5,-35],[10,-16],[-9,-16]],'#aab693',body);poly([[-3,-35],[3,-35],[5,-17],[-4,-17]],'#d1d8b6',body);
+el('ellipse',{cx:0,cy:-42,rx:8,ry:10,fill:'#5f493d'},body);circle(2,-41,6.2,'#deb99b',body);el('path',{d:'M -7 -42 Q -4 -54 5 -49 Q 10 -46 8 -41 Q 2 -44 -2 -45 L -4 -36 L -8 -35 Z',fill:'#624b3d'},body);circle(6,-41,.7,'#4d4439',body);
+if(action==='phone'){
+line([[-5,-32],[-11,-26],[-7,-39]],'#d9b497',3,body);el('rect',{x:-9,y:-43,width:5,height:9,rx:1,fill:'#30483d'},body);el('rect',{x:-8,y:-42,width:3,height:6,rx:.5,fill:'#cadbd6'},body);line([[5,-32],[10,-21]],'#d9b497',3,body);
+}else if(action==='work'){
+const f=Math.sin(u*32)*3;line([[-5,-32],[-10,-26],[-15,-28+f]],'#d9b497',3,body);line([[5,-32],[12,-28],[17,-30-f]],'#d9b497',3,body);if(carried)bouquet(14,-35,.7,body);
+}else{
+line([[-5,-32],[-9,-21+sway]],'#d9b497',3,body);line([[5,-32],[11,-24-sway]],'#d9b497',3,body);if(carried)bouquet(13,-33,.72,body);else{el('rect',{x:-14,y:-23,width:9,height:10,rx:2,fill:'#cfbc9d'},body);el('path',{d:'M -12 -23 Q -11 -29 -7 -23',fill:'none',stroke:'#a99678','stroke-width':1},body)}
+}
+personNode.depth=q[0]+q[1]+12;
+}
+const phases=['01 / ЗАКУПКА','02 / СБОРКА','03 / ДОСТАВКА','04 / НОВЫЙ ЗАКАЗ'];let time=0,speed=1,playing=!matchMedia('(prefers-reduced-motion: reduce)').matches,last=0,current=-1,zoom=1;
+const routeLine=el('polyline',{fill:'none',stroke:'#aabf99','stroke-width':3,'stroke-dasharray':'5 9','stroke-linecap':'round','opacity':.7},$('route'));
+function speech(q,message,phone=false){const g=$('bubble');g.replaceChildren();if(!message)return;const a=p(...q,phone?78:75);const width=Math.max(80,message.length*6.2+26);poly([[a[0]-5,a[1]+14],[a[0]+5,a[1]+14],[a[0],a[1]+21]],'#fff',g);el('rect',{x:a[0]-width/2,y:a[1]-14,width,height:29,rx:10,fill:'#fff',stroke:'#d9e2d4','stroke-width':1},g);txt(a[0],a[1]+4,message,11,'#466450',g,{'text-anchor':'middle'});if(phone){for(let i=0;i<2;i++)el('circle',{cx:a[0]+width/2-3,cy:a[1]-13,r:5+i*4,fill:'none',stroke:'#a6bc8c','stroke-width':1,opacity:.5+.4*Math.sin(time*5+i)},g)}}
+function fmt(s){s=Math.floor(s);return`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`}
+function render(){const idx=segments.findIndex(s=>time>=s.start&&time<s.end);const s=segments[idx<0?0:idx];const u=clamp((time-s.start)/s.duration,0,1);let car,angle=lastAngle,person=null,carried=0;
+if(s.type==='drive'){const v=at(s.route,u);car=v.q;angle=v.angle;lastAngle=angle;routeLine.setAttribute('points',pts(s.route.samples.map(q=>p(...q))));routeLine.style.display='';}
+else{car=s.q;const preceding=segments.slice(0,idx).reverse().find(s=>s.type==='drive');angle=preceding?at(preceding.route,1).angle:-Math.PI/2;routeLine.style.display='none';if(s.type==='exit')person=mix([car[0],car[1]+8],s.exit,u);if(s.type==='walk')person=mix(s.exit,s.door,u);if(s.type==='work')person=s.door;if(s.type==='back')person=mix(s.door,s.exit,u);if(s.type==='load')person=s.exit;if(s.type==='enter')person=mix(s.exit,[car[0],car[1]+8],u);if(s.type==='phone')person=s.exit;
+if(s.step===0&&['back','load'].includes(s.type))carried=1;if(s.step===1&&['walk','work','back','load'].includes(s.type))carried=1;if(s.step===2&&['exit','walk','work'].includes(s.type))carried=1;
+}
+van(car,angle,s.flowers+s.bunches,s.type==='drive',u);personGroup.style.display=person?'':'none';if(person)woman(person,s.type,u,carried);
+const arranged=time>=segments.find(s=>s.loc==='studio'&&s.type==='work').start;const assembly=segments.find(s=>s.loc==='studio'&&s.type==='work');$('arrangement').setAttribute('opacity',arranged?(time<assembly.end?.25+.75*clamp((time-assembly.start)/assembly.duration,0,1):1):.15);
+for(const id of['client1','client2','client3']){const delivered=segments.find(t=>t.loc===id&&t.type==='work').end;$('gift-'+id).setAttribute('opacity',time>=delivered?1:0)}
+nodes.sort((a,b)=>a.depth-b.depth);for(const o of nodes)world.appendChild(o.node);
+speech(person||car,s.type==='work'?(s.step===0?'Выбираем цветы':s.step===1?'Собираем букеты':'Для вашего пространства'):s.type==='phone'?'Новый заказ ♡':s.type==='load'&&s.step===0?'Цветы в машине':'',s.type==='phone');
+if(idx!==current){current=idx;$('status').textContent=s.text;$('phase').textContent=phases[s.step];$('cargo').textContent=s.bunches?`В машине: ${s.bunches} ${s.bunches===1?'готовый букет':'готовых букета'}`:s.flowers?`Свежие цветы: ${s.flowers===1?'первый склад':'два склада'}`:'В машине пока пусто';document.querySelectorAll('.step').forEach((n,i)=>{n.classList.toggle('active',i===s.step);n.classList.toggle('done',i<s.step);if(i===s.step)n.setAttribute('aria-current','step');else n.removeAttribute('aria-current')})}
+$('timeline').value=Math.round(time/total*1000);$('clock').textContent=`${fmt(time)} / ${fmt(total)}`;
+}
+function updatePlay(){ $('play').textContent=playing?'Ⅱ Пауза':'▶ Продолжить';$('playState').textContent=playing?'Маршрут запущен':'Маршрут на паузе';$('play').setAttribute('aria-label',playing?'Приостановить анимацию':'Продолжить анимацию')}
+function seek(t){time=clamp(t,0,total-.001);current=-1;render()}
+function jumpLocation(id){seek(locationStarts[id]);}
+$('play').addEventListener('click',()=>{playing=!playing;updatePlay()});$('restart').addEventListener('click',()=>{seek(0);playing=true;updatePlay()});$('speed').addEventListener('change',e=>{speed=Number(e.target.value)});$('timeline').addEventListener('input',e=>seek(Number(e.target.value)/1000*total));document.querySelectorAll('[data-step]').forEach(b=>b.addEventListener('click',()=>seek(starts[Number(b.dataset.step)])));
+function setZoom(z){const view=$('viewport');const ratio=(view.scrollLeft+view.clientWidth/2)/(view.scrollWidth||1);zoom=clamp(z,1,2.5);const min=innerWidth<=700?700:0;$('scene').style.width=zoom===1?'100%':`${Math.max(view.clientWidth,min)*zoom}px`;$('zoomReset').textContent=zoom.toFixed(zoom%1?1:0)+'×';view.scrollLeft=ratio*view.scrollWidth-view.clientWidth/2}
+$('zoomIn').addEventListener('click',()=>setZoom(zoom+.5));$('zoomOut').addEventListener('click',()=>setZoom(zoom-.5));$('zoomReset').addEventListener('click',()=>setZoom(1));
+document.addEventListener('visibilitychange',()=>{last=0});
+function frame(t){if(last&&playing&&!document.hidden)time=(time+Math.min((t-last)/1000,.1)*speed)%total;last=t;render();requestAnimationFrame(frame)}
+updatePlay();render();requestAnimationFrame(frame);
+// Small read-only inspection interface for checking every animation stage.
+window.nastebelDemo={seek,play(){playing=true;updatePlay()},pause(){playing=false;updatePlay()},get duration(){return total},get time(){return time},get segments(){return segments.map(({start,end,type,loc,step})=>({start,end,type,loc,step}))}};
+// Keep the island centred on a narrow screen; swipe to explore the scene.
+if(innerWidth<=700)requestAnimationFrame(()=>{$('viewport').scrollLeft=($('viewport').scrollWidth-$('viewport').clientWidth)/2});
+})();
+</script>
+</body>
+</html>
