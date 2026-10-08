@@ -215,7 +215,7 @@ $('play').addEventListener('click',()=>{playing=!playing;updatePlay()});$('resta
 function setZoom(z){const view=$('viewport');const ratio=(view.scrollLeft+view.clientWidth/2)/(view.scrollWidth||1);zoom=clamp(z,1,2.5);const min=innerWidth<=700?700:0;$('scene').style.width=zoom===1?'100%':`${Math.max(view.clientWidth,min)*zoom}px`;$('zoomReset').textContent=zoom.toFixed(zoom%1?1:0)+'×';view.scrollLeft=ratio*view.scrollWidth-view.clientWidth/2}
 $('zoomIn').addEventListener('click',()=>setZoom(zoom+.5));$('zoomOut').addEventListener('click',()=>setZoom(zoom-.5));$('zoomReset').addEventListener('click',()=>setZoom(1));
 document.addEventListener('visibilitychange',()=>{last=0});
-function frame(t){if(last&&playing&&!document.hidden)time=(time+Math.min((t-last)/1000,.1)*speed)%total;last=t;render();requestAnimationFrame(frame)}
+function frame(t){const advance=last&&playing&&!document.hidden;if(advance)time=(time+Math.min((t-last)/1000,.1)*speed)%total;last=t;if(advance)render();requestAnimationFrame(frame)}
 updatePlay();render();requestAnimationFrame(frame);
 // Small read-only inspection interface for checking every animation stage.
 window.nastebelDemo={seek,play(){playing=true;updatePlay()},pause(){playing=false;updatePlay()},get duration(){return total},get time(){return time},get segments(){return segments.map(({start,end,type,loc,step})=>({start,end,type,loc,step}))}};
